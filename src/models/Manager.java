@@ -133,8 +133,7 @@ public class Manager {
             if(!element.equals(""))
                 stripInformationAux.add(element);
         }
-        System.out.println(stripInformationAux);
-        return null;
+        return stripGenerator(stripInformationAux);
     }
 
     private ArrayList<String> stripInformationIdentifier(String stripInfo, int index){
@@ -230,7 +229,9 @@ public class Manager {
                     return new TriangleV2Strip(stripAmount, diameter, sides, sideA, sideB, hook);
                 default:
                     diameter = stripInformation.get(1);
-                    ArrayList<String> modifiersList = (ArrayList<String>) stripInformation.subList(2, stripInformation.size()-1);
+                    ArrayList<String> modifiersList = new ArrayList<String>();
+                    for(int i = 2; i < stripInformation.size(); i++)
+                        modifiersList.add(stripInformation.get(i));
                     return new BarStrip(stripAmount, diameter, modifiersList);
             }
         }

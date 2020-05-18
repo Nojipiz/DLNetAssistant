@@ -2,6 +2,8 @@ package models.strips;
 
 public abstract class Strip {
 
+    public static final String CERO = "0";
+
     private int amount;
     private String diameter;
     private double sizeInMeters;
@@ -16,4 +18,19 @@ public abstract class Strip {
     public double getSize(){
         return this.sizeInMeters;
     }
+
+    public static String correctNumber(String number){
+        return (number.charAt(0) == '.') ? (CERO + number) : (number);
+    }
+
+    public static double roundDoubles(double value, int decimalNumber) {
+        double integerPart, result;
+        result = value;
+        integerPart = Math.floor(result);
+        result=(result-integerPart)*Math.pow(10, decimalNumber);
+        result=Math.round(result);
+        result=(result/Math.pow(10, decimalNumber))+integerPart;
+        return result;
+    }
+
 }

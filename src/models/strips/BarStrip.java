@@ -6,16 +6,14 @@ public class BarStrip extends Strip{
 
     private int amount;
     private String diameter;
-    private String sides;
-    private String hook;
+    private ArrayList<String> modifiers;
     private double sizeInMeters;
 
     public BarStrip(int amount, String diameter, ArrayList<String> modifiers){
         super(amount, diameter);
         this.amount = amount;
         this.diameter = diameter;
-        this.sides = sides;
-        this.hook = hook;
+        this.modifiers = modifiers;
     }
 
     public void calculateSize(){

@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/models/BarDiameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/StripTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DLAssistant.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/strips/BarStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/BarStrip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/strips/RectangularStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/RectangularStrip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/strips/Strip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/Strip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +26,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Nojipiz &lt;nojipiz@protonmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bil5zEE4rDp8dPs3j8s6v2wAmO" />
@@ -27,14 +47,31 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_opened_file_path" value="/lib/jvm/default/lib/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Debugger_Data_Views_Java" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Controller">
     <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="presenters.Controller" />
       <module name="DLAssistant" />
@@ -48,8 +85,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StripTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DLAssistant" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StripTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="views in DLAssistant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DLAssistant" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="views" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StripTest" />
+        <item itemvalue="JUnit.views in DLAssistant" />
         <item itemvalue="Application.Controller" />
       </list>
     </recent_temporary>
@@ -68,65 +136,108 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="138" y="30" width="1086" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589763046032">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="138" y="30" width="1086" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1589763046032" />
+    <state x="681" y="12" width="687" height="758" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589763171661">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="681" y="12" width="687" height="758" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.768@0.0.1366.768" timestamp="1589763171661" />
+    <state x="346" y="175" width="530" height="435" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1589762496888">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="175" width="530" height="435" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.768@0.0.1366.768" timestamp="1589762496888" />
     <state x="438" y="77" key="#xdebugger.evaluate" timestamp="1589406264566">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="438" y="77" key="#xdebugger.evaluate/0.0.1366.768@0.0.1366.768" timestamp="1589406264566" />
+    <state x="429" y="229" width="497" height="277" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589745018343">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="429" y="229" width="497" height="277" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1589745018343" />
+    <state x="608" y="9" width="679" height="758" key="CommitChangelistDialog2" timestamp="1589763433863">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="608" y="9" width="679" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1589763433863" />
     <state x="420" y="70" width="653" height="572" key="FileChooserDialogImpl" timestamp="1589123845142">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="420" y="70" width="653" height="572" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1589123845141" />
-    <state width="1320" height="180" key="GridCell.Tab.0.bottom" timestamp="1589737789219">
+    <state width="1320" height="180" key="GridCell.Tab.0.bottom" timestamp="1589763302092">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589737789219" />
-    <state width="1320" height="180" key="GridCell.Tab.0.center" timestamp="1589737789218">
+    <state width="1320" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589763302092" />
+    <state width="1320" height="180" key="GridCell.Tab.0.center" timestamp="1589763302091">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589737789218" />
-    <state width="1320" height="180" key="GridCell.Tab.0.left" timestamp="1589737789218">
+    <state width="1320" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589763302091" />
+    <state width="1320" height="180" key="GridCell.Tab.0.left" timestamp="1589763302091">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589737789218" />
-    <state width="1320" height="180" key="GridCell.Tab.0.right" timestamp="1589737789219">
+    <state width="1320" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589763302091" />
+    <state width="1320" height="180" key="GridCell.Tab.0.right" timestamp="1589763302092">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589737789219" />
-    <state width="1320" height="221" key="GridCell.Tab.1.bottom" timestamp="1589422133971">
+    <state width="1320" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589763302092" />
+    <state width="1320" height="221" key="GridCell.Tab.1.bottom" timestamp="1589762542550">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589422133971" />
-    <state width="1320" height="221" key="GridCell.Tab.1.center" timestamp="1589422133971">
+    <state width="1320" height="221" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589762542550" />
+    <state width="1320" height="221" key="GridCell.Tab.1.center" timestamp="1589762542550">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1589422133971" />
-    <state width="1320" height="221" key="GridCell.Tab.1.left" timestamp="1589422133971">
+    <state width="1320" height="221" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1589762542550" />
+    <state width="1320" height="221" key="GridCell.Tab.1.left" timestamp="1589762542550">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1589422133971" />
-    <state width="1320" height="221" key="GridCell.Tab.1.right" timestamp="1589422133971">
+    <state width="1320" height="221" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1589762542550" />
+    <state width="1320" height="221" key="GridCell.Tab.1.right" timestamp="1589762542550">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1589422133971" />
-    <state x="201" y="-64" width="1030" height="758" key="SettingsEditor" timestamp="1589404850736">
+    <state width="1320" height="221" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1589762542550" />
+    <state x="165" y="10" width="1030" height="758" key="SettingsEditor" timestamp="1589762447388">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="201" y="-64" width="1030" height="758" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1589404850736" />
+    <state x="165" y="10" width="1030" height="758" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1589762447388" />
     <state width="685" height="379" key="XDebugger.FullValuePopup" timestamp="1589398739064">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="685" height="379" key="XDebugger.FullValuePopup/0.0.1366.768@0.0.1366.768" timestamp="1589398739064" />
-    <state x="716" y="199" key="com.intellij.ide.util.TipDialog" timestamp="1589733647237">
+    <state x="714" y="181" key="com.intellij.ide.util.TipDialog" timestamp="1589758965112">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="716" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1589733647237" />
+    <state x="714" y="181" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1589758965112" />
+    <state x="391" y="196" width="558" height="214" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589762643663">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="391" y="196" width="558" height="214" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.768@0.0.1366.768" timestamp="1589762643663" />
+    <state x="392" y="125" width="448" height="581" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589762506079">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="392" y="125" width="448" height="581" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768@0.0.1366.768" timestamp="1589762506079" />
     <state x="375" y="122" width="623" height="530" key="find.popup" timestamp="1589122630041">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="375" y="122" width="623" height="530" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1589122630041" />
+    <state x="298" y="-8" width="918" height="758" key="new project wizard" timestamp="1589762445585">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="298" y="-8" width="918" height="758" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1589762445585" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589167432629">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589167432629" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/models/strips/RectangularStrip.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
