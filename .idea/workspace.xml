@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/CurvedStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/CurvedStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/DualFootStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/DualFootStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/RectangularStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/RectangularStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/Strip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/Strip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,12 +141,20 @@
       <option name="project" value="LOCAL" />
       <updated>1589763514912</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Curved Strip Gen">
+      <created>1590024473729</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590024473729</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added strip calculate method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added strip calculate method" />
+    <MESSAGE value="Added Curved Strip Gen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Curved Strip Gen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="138" y="30" width="1086" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589763046032">
@@ -178,30 +177,30 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="229" width="497" height="277" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1589745018343" />
-    <state x="602" y="-45" width="679" height="758" key="CommitChangelistDialog2" timestamp="1589763514830">
+    <state x="326" y="-33" width="679" height="758" key="CommitChangelistDialog2" timestamp="1590024473220">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="602" y="-45" width="679" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1589763514830" />
+    <state x="326" y="-33" width="679" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1590024473220" />
     <state x="420" y="70" width="653" height="572" key="FileChooserDialogImpl" timestamp="1589123845142">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="420" y="70" width="653" height="572" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1589123845141" />
-    <state width="1320" height="221" key="GridCell.Tab.0.bottom" timestamp="1590023006447">
+    <state width="1320" height="180" key="GridCell.Tab.0.bottom" timestamp="1590024477253">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590023006447" />
-    <state width="1320" height="221" key="GridCell.Tab.0.center" timestamp="1590023006447">
+    <state width="1320" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590024477253" />
+    <state width="1320" height="180" key="GridCell.Tab.0.center" timestamp="1590024477252">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1590023006447" />
-    <state width="1320" height="221" key="GridCell.Tab.0.left" timestamp="1590023006446">
+    <state width="1320" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1590024477252" />
+    <state width="1320" height="180" key="GridCell.Tab.0.left" timestamp="1590024477252">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1590023006446" />
-    <state width="1320" height="221" key="GridCell.Tab.0.right" timestamp="1590023006447">
+    <state width="1320" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1590024477252" />
+    <state width="1320" height="180" key="GridCell.Tab.0.right" timestamp="1590024477253">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="221" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1590023006447" />
+    <state width="1320" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1590024477253" />
     <state width="1320" height="221" key="GridCell.Tab.1.bottom" timestamp="1590023006449">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
