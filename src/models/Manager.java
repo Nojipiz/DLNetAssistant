@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Manager {
 
     public static final String NEW_ELEMENT_INDICATOR = "Nuevo Elemento";
+    public static final String ELEMENT_INDICATOR = "NA";
     public static final String FILE_END_INDICATOR = "Total";
     public static final char STRIP_SEPARATION = '@';
 
@@ -33,7 +34,7 @@ public class Manager {
         clearBarInformation();
     }
 
-    public String clearBarInformation(){
+    private String clearBarInformation(){
         int startIndex = barInformation.indexOf(NEW_ELEMENT_INDICATOR) + 27;
         int endIndex = barInformation.indexOf(FILE_END_INDICATOR);
         barInformation = barInformation.substring(startIndex, endIndex);
@@ -118,6 +119,7 @@ public class Manager {
     public void calculateStrips(){
         for(String strip : stripInfoList){
             if(strip != null) {
+                System.out.println(strip);
                 stripList.add(generateStrips(strip));
             }
         }

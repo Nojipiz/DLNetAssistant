@@ -3,6 +3,9 @@ package models.strips;
 public abstract class Strip {
 
     public static final String CERO = "0";
+    public static final String MULTIPLY_SYMBOL = "*";
+    public static final String G = "*";
+    public static final String VOID = "";
 
     private int amount;
     private String diameter;

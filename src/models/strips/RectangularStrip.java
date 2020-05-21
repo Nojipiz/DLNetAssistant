@@ -2,8 +2,6 @@ package models.strips;
 
 public class RectangularStrip extends Strip{
 
-    public static final String MULTIPLY_SYMBOL = "*";
-
     private int amount;
     private String diameter;
     private String sides;

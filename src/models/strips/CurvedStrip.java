@@ -14,9 +14,16 @@ public class CurvedStrip extends Strip{
         this.diameter = diameter;
         this.length = length;
         this.hook = hook;
+        calculateSize();
     }
 
     public void calculateSize(){
-
+        double totalLength, totalHook;
+        totalLength = Double.parseDouble(Strip.correctNumber(length));
+        hook = hook.replaceAll("G", "");
+        int index = hook.indexOf("/");
+        hook = hook.substring(0, index);
+        totalHook = Double.parseDouble(Strip.correctNumber(hook));
+        sizeInMeters = totalLength + (totalHook*2);
     }
 }
