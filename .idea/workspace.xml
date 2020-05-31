@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/HookStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/HookStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/RoundStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/RoundStrip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StripManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/strips/EditedTriangleStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/EditedTriangleStrip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Orlando" />
         <option value="Nojipiz &lt;nojipiz@protonmail.com&gt;" />
       </list>
     </option>
@@ -50,7 +55,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Debugger_Data_Views_Java" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -157,13 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590024485783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added calculateSize">
+      <created>1590611937890</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590611937890</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added strip calculate method" />
     <MESSAGE value="Added Curved Strip Gen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Curved Strip Gen" />
+    <MESSAGE value="Added calculateSize" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added calculateSize" />
   </component>
   <component name="WindowStateProjectService">
     <state x="138" y="30" width="1086" height="699" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589763046032">
@@ -178,6 +191,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="346" y="175" width="530" height="435" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.768@0.0.1366.768" timestamp="1589762496888" />
+    <state x="420" y="-176" width="576" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590945015333">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="420" y="-176" width="576" height="758" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1590945015333" />
     <state x="438" y="77" key="#xdebugger.evaluate" timestamp="1589406264566">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -186,62 +203,62 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="229" width="497" height="277" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1589745018343" />
-    <state x="324" y="-51" width="679" height="758" key="CommitChangelistDialog2" timestamp="1590024485701">
+    <state x="355" y="-52" width="679" height="758" key="CommitChangelistDialog2" timestamp="1590960681940">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="324" y="-51" width="679" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1590024485701" />
+    <state x="355" y="-52" width="679" height="758" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1590960681940" />
     <state x="420" y="70" width="653" height="572" key="FileChooserDialogImpl" timestamp="1589123845142">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="420" y="70" width="653" height="572" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1589123845141" />
-    <state width="1320" height="180" key="GridCell.Tab.0.bottom" timestamp="1590611192331">
+    <state width="1320" height="180" key="GridCell.Tab.0.bottom" timestamp="1590960646565">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590611192331" />
-    <state width="1320" height="180" key="GridCell.Tab.0.center" timestamp="1590611192331">
+    <state width="1320" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590960646565" />
+    <state width="1320" height="180" key="GridCell.Tab.0.center" timestamp="1590960646564">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1590611192331" />
-    <state width="1320" height="180" key="GridCell.Tab.0.left" timestamp="1590611192330">
+    <state width="1320" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1590960646564" />
+    <state width="1320" height="180" key="GridCell.Tab.0.left" timestamp="1590960646563">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1590611192330" />
-    <state width="1320" height="180" key="GridCell.Tab.0.right" timestamp="1590611192331">
+    <state width="1320" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1590960646563" />
+    <state width="1320" height="180" key="GridCell.Tab.0.right" timestamp="1590960646564">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1590611192331" />
-    <state width="1320" height="220" key="GridCell.Tab.1.bottom" timestamp="1590611182303">
+    <state width="1320" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1590960646564" />
+    <state width="1320" height="220" key="GridCell.Tab.1.bottom" timestamp="1590960505642">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590611182303" />
-    <state width="1320" height="220" key="GridCell.Tab.1.center" timestamp="1590611182302">
+    <state width="1320" height="220" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1590960505642" />
+    <state width="1320" height="220" key="GridCell.Tab.1.center" timestamp="1590960505641">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1590611182302" />
-    <state width="1320" height="220" key="GridCell.Tab.1.left" timestamp="1590611182302">
+    <state width="1320" height="220" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1590960505641" />
+    <state width="1320" height="220" key="GridCell.Tab.1.left" timestamp="1590960505641">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1590611182302" />
-    <state width="1320" height="220" key="GridCell.Tab.1.right" timestamp="1590611182303">
+    <state width="1320" height="220" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1590960505641" />
+    <state width="1320" height="220" key="GridCell.Tab.1.right" timestamp="1590960505641">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1590611182303" />
-    <state x="165" y="10" width="1030" height="758" key="SettingsEditor" timestamp="1589762447388">
+    <state width="1320" height="220" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1590960505641" />
+    <state x="163" y="-8" width="1030" height="758" key="SettingsEditor" timestamp="1590933555438">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="165" y="10" width="1030" height="758" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1589762447388" />
-    <state x="271" y="72" width="806" height="520" key="Vcs.Push.Dialog.v2" timestamp="1590024487902">
+    <state x="163" y="-8" width="1030" height="758" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1590933555438" />
+    <state x="269" y="54" width="806" height="520" key="Vcs.Push.Dialog.v2" timestamp="1590611939922">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="271" y="72" width="806" height="520" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1590024487902" />
-    <state width="685" height="379" key="XDebugger.FullValuePopup" timestamp="1589398739064">
+    <state x="269" y="54" width="806" height="520" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1590611939922" />
+    <state width="685" height="379" key="XDebugger.FullValuePopup" timestamp="1590958467662">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="685" height="379" key="XDebugger.FullValuePopup/0.0.1366.768@0.0.1366.768" timestamp="1589398739064" />
-    <state x="708" y="127" key="com.intellij.ide.util.TipDialog" timestamp="1590607127063">
+    <state width="685" height="379" key="XDebugger.FullValuePopup/0.0.1366.768@0.0.1366.768" timestamp="1590958467662" />
+    <state x="698" y="37" key="com.intellij.ide.util.TipDialog" timestamp="1590956991996">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="708" y="127" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1590607127063" />
+    <state x="698" y="37" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1590956991996" />
     <state x="391" y="196" width="558" height="214" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589762643663">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -266,16 +283,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/models/strips/HookStrip.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/models/strips/HookStrip.java</url>
-          <line>8</line>
-          <properties field="sizeInMeters" class="models.strips.HookStrip" />
-          <option name="timeStamp" value="14" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/models/StripManager.java</url>
+          <line>61</line>
+          <properties class="models.StripManager" method="repairStartIndexbarInfo">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,7 +5,7 @@ import models.strips.*;
 
 import java.util.ArrayList;
 
-public class Manager {
+public class StripManager {
 
     public static final String NEW_ELEMENT_INDICATOR = "Nuevo Elemento";
     public static final String ELEMENT_INDICATOR = "NA";
@@ -28,13 +28,13 @@ public class Manager {
     private String barInformation;
     private String[] stripInfoList;
 
-    public Manager(String content){
+    public StripManager(String content){
         this.barInformation = content;
         stripList = new ArrayList<Strip>();
         clearBarInformation();
     }
 
-    private String clearBarInformation(){
+    private void clearBarInformation(){
         int startIndex = barInformation.indexOf(NEW_ELEMENT_INDICATOR) + 27;
         int endIndex = barInformation.indexOf(FILE_END_INDICATOR);
         barInformation = barInformation.substring(startIndex, endIndex);
@@ -46,19 +46,27 @@ public class Manager {
         }
         clearBarInfo = clearBarInfo.replaceAll(">", "");
         barInformation = clearBarInfo;
-        return barInformation;
     }
 
     public void readContent(){
-        String barTypes = barInformation.substring(0, 5);
-        barInformation = barInformation.substring(5, barInformation.length() - 1);
+        //BugInBarInformation
+        int index = barInformation.indexOf("@");
+        String barTypes = barInformation.substring(0, index);
+        barInformation = barInformation.substring(index, barInformation.length() - 1);
         barInformation = repairBarInformation(barInformation);
         barTypes = barTypes.replaceAll("[^0-9]", "");
         int typeBarsAmount = Integer.parseInt(barTypes);
         stripInfoList = new String[typeBarsAmount];
     }
 
+    private String repairStartIndexbarInfo(String barInfo){
+        while(barInfo.charAt(0) < 48 || barInfo.charAt(0) > 57)
+            barInfo = barInfo.substring(1);
+        return barInfo;
+    }
+
     private String repairBarInformation(String barInfo){
+        barInfo = repairStartIndexbarInfo(barInfo);
         if(barInfo.charAt(0) != '&'){
             barInfo = "&" + barInfo;
         }

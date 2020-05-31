@@ -1,6 +1,6 @@
 package presenters;
 
-import models.Manager;
+import models.StripManager;
 import views.Console;
 import views.DliReader;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Controller {
     private Console console;
-    private Manager manager;
+    private StripManager stripManager;
     private DliReader dliReader;
 
     private Controller(){
@@ -32,8 +32,8 @@ public class Controller {
     private void contentRead(){
         try{
             String content = dliReader.getFileContent();
-            manager = new Manager(content);
-            manager.readContent();
+            stripManager = new StripManager(content);
+            stripManager.readContent();
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -41,12 +41,12 @@ public class Controller {
 
     private void stripCalc(){
         try {
-            manager.stripInfo();
-            manager.cleanStripInfo();
+            stripManager.stripInfo();
+            stripManager.cleanStripInfo();
         }catch(Exception e){
             e.printStackTrace();
         }finally {
-            manager.calculateStrips();
+            stripManager.calculateStrips();
         }
     }
 
