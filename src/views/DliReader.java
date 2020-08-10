@@ -17,11 +17,10 @@ public class DliReader {
 
     public String getFileContent() throws IOException {
         BufferedReader bReader = new BufferedReader(reader);
-        String fileContent = "";
-        String fileLine = "";
-        while((fileLine = bReader.readLine()) != null){
+        String fileLine, fileContent = "";
+        while((fileLine = bReader.readLine()) != null)
             fileContent += fileLine;
-        }
+        bReader.close();
         return fileContent;
     }
 }

@@ -6,6 +6,12 @@ public abstract class Strip {
     public static final String MULTIPLY_SYMBOL = "*";
     public static final String G = "*";
     public static final String VOID = "";
+    public static final int ONE = 1;
+    public static final int TWO = 2;
+    public static final int THREE = 3;
+    public static final String FLAT_BAR_ID = "OM";
+    public static final String U_HOOK_ID = "U";
+    public static final String L_HOOK_ID = "L";
 
     private int amount;
     private String diameter;
@@ -16,7 +22,7 @@ public abstract class Strip {
         this.diameter = diameter;
     }
 
-    public abstract void calculateSize();
+    protected abstract void calculateSize();
 
     public double getSize(){
         return this.sizeInMeters;

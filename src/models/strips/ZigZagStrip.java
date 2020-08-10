@@ -15,6 +15,7 @@ public class ZigZagStrip extends Strip{
         this.height = height;
         this.sideA = sideA;
         this.sideB = sideB;
+        calculateSize();
     }
 
     public void calculateSize(){

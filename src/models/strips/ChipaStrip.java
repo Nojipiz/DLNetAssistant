@@ -19,8 +19,9 @@ public class ChipaStrip extends Strip{
 
     public void calculateSize(){
         for(BarDiameter barDiameter : BarDiameter.values()){
-            if(diameter.equalsIgnoreCase(barDiameter.getIndicator()))
+            if(diameter.equalsIgnoreCase(barDiameter.getIndicator())) {
                 sizeInMeters = Double.parseDouble(weight) * barDiameter.getWeightPerMeter();
+            }
         }
     }
 }

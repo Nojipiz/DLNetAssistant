@@ -126,10 +126,8 @@ public class StripManager {
 
     public void calculateStrips(){
         for(String strip : stripInfoList){
-            if(strip != null) {
-                System.out.println(strip);
+            if(strip != null)
                 stripList.add(generateStrips(strip));
-            }
         }
     }
 
@@ -219,6 +217,7 @@ public class StripManager {
                     diameter = stripInformation.get(2);
                     weight = stripInformation.get(3);
                     return new ChipaStrip(stripAmount, diameter, weight);
+                    //ZIG_ZAG mas muestras
                 case STRIP_ZIGZAG:
                     diameter = stripInformation.get(2);
                     height = stripInformation.get(3);
@@ -246,5 +245,6 @@ public class StripManager {
             }
         }
     }
+
 
 }
