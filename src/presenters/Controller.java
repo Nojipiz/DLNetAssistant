@@ -17,7 +17,7 @@ public class Controller {
         readingDef();
         contentRead();
         stripCalc();
-
+        stripPrint();
     }
 
     private void readingDef(){
@@ -48,6 +48,10 @@ public class Controller {
         }finally {
             stripManager.calculateStrips();
         }
+    }
+
+    private void stripPrint(){
+        console.showContent(stripManager.getStripList());
     }
 
     public static void main(String args[]){

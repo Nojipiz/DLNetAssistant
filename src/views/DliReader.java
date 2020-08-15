@@ -7,20 +7,19 @@ import java.io.IOException;
 
 public class DliReader {
 
-    private String filePath;
     private FileReader reader;
 
     public DliReader(String filePath) throws FileNotFoundException {
-        this.filePath = filePath;
-        reader = new FileReader(this.filePath);
+        reader = new FileReader(filePath);
     }
 
     public String getFileContent() throws IOException {
         BufferedReader bReader = new BufferedReader(reader);
-        String fileLine, fileContent = "";
+        String fileLine;
+        StringBuilder fileContent = new StringBuilder();
         while((fileLine = bReader.readLine()) != null)
-            fileContent += fileLine;
+            fileContent.append(fileLine);
         bReader.close();
-        return fileContent;
+        return fileContent.toString();
     }
 }

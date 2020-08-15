@@ -3,7 +3,7 @@ package models.strips;
 public abstract class Strip {
 
     public static final String CERO = "0";
-    public static final String MULTIPLY_SYMBOL = "*";
+    protected static final String MULTIPLY_SYMBOL = "*";
     public static final String G = "*";
     public static final String VOID = "";
     public static final int ONE = 1;
@@ -22,10 +22,14 @@ public abstract class Strip {
         this.diameter = diameter;
     }
 
-    protected abstract void calculateSize();
+    public abstract void calculateSize();
 
     public double getSize(){
         return this.sizeInMeters;
+    }
+
+    public int getAmount(){
+        return this.amount;
     }
 
     public static String correctNumber(String number){

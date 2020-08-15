@@ -49,7 +49,6 @@ public class StripManager {
     }
 
     public void readContent(){
-        //BugInBarInformation
         int index = barInformation.indexOf("@");
         String barTypes = barInformation.substring(0, index);
         barInformation = barInformation.substring(index, barInformation.length() - 1);
@@ -126,8 +125,11 @@ public class StripManager {
 
     public void calculateStrips(){
         for(String strip : stripInfoList){
-            if(strip != null)
-                stripList.add(generateStrips(strip));
+            if(strip != null) {
+                Strip generatedStrip = generateStrips(strip);
+                if(generatedStrip != null)
+                    stripList.add(generatedStrip);
+            }
         }
     }
 
@@ -246,5 +248,15 @@ public class StripManager {
         }
     }
 
+    //test methods
 
+    public String[] getStripList(){
+        String[] list = new String[stripList.size()];
+        int index = 0;
+        for(Strip strip : stripList){
+            list[index] = String.valueOf(strip.getSize());
+            index++;
+        }
+        return list;
+    }
 }
