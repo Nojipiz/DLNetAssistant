@@ -16,8 +16,9 @@ public class Console {
 
     public String getFilePath(){
         System.out.println(GETFILEPATH_MSG);
-        String filePath = scan.nextLine();
-        return filePath;
+        //CAMBIO TEMPORAL PARA AHORRAR TIEMPO
+        //String filePath = scan.nextLine();
+        return "/home/nojipiz/Proyectos/DL.net Proyect/Test/ALL_STRIPS.dli";
     }
 
     public void showContent(String content){

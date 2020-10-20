@@ -1,5 +1,4 @@
 package models;
-
 import exceptions.InvalidStripTypeException;
 import models.strips.*;
 
@@ -8,7 +7,6 @@ import java.util.ArrayList;
 public class StripManager {
 
     public static final String NEW_ELEMENT_INDICATOR = "Nuevo Elemento";
-    public static final String ELEMENT_INDICATOR = "NA";
     public static final String FILE_END_INDICATOR = "Total";
     public static final char STRIP_SEPARATION = '@';
 
@@ -30,7 +28,7 @@ public class StripManager {
 
     public StripManager(String content){
         this.barInformation = content;
-        stripList = new ArrayList<Strip>();
+        stripList = new ArrayList<>();
         clearBarInformation();
     }
 
@@ -38,14 +36,14 @@ public class StripManager {
         int startIndex = barInformation.indexOf(NEW_ELEMENT_INDICATOR) + 27;
         int endIndex = barInformation.indexOf(FILE_END_INDICATOR);
         barInformation = barInformation.substring(startIndex, endIndex);
-        String clearBarInfo = "";
+        StringBuilder clearBarInfo = new StringBuilder();
         for(int i = 0; i < barInformation.length(); i++){
             char element = barInformation.charAt(i);
             if(element > 31 && element < 123)
-                clearBarInfo += element;
+                clearBarInfo.append(element);
         }
-        clearBarInfo = clearBarInfo.replaceAll(">", "");
-        barInformation = clearBarInfo;
+        clearBarInfo = new StringBuilder(clearBarInfo.toString().replaceAll(">", ""));
+        barInformation = clearBarInfo.toString();
     }
 
     public void readContent(){
@@ -83,23 +81,23 @@ public class StripManager {
     }
 
     public void stripInfo(){
-        String stripInfo = "";
+        StringBuilder stripInfo = new StringBuilder();
         int stripListIndex = 0;
         for(int i = 0; i < barInformation.length(); i++){
             char element = barInformation.charAt(i);
             if(element == '@'){
                 if(stripListIndex < stripInfoList.length){
                     if(stripInfo.length() < 5) {
-                        stripInfo = "";
+                        stripInfo = new StringBuilder();
                     }else{
-                        stripInfoList[stripListIndex] = stripInfo;
-                        stripInfo = "";
+                        stripInfoList[stripListIndex] = stripInfo.toString();
+                        stripInfo = new StringBuilder();
                         stripListIndex++;
                     }
                 }else
                     return;
             }else{
-                stripInfo += element;
+                stripInfo.append(element);
             }
         }
     }
@@ -123,6 +121,8 @@ public class StripManager {
         }
     }
 
+    /* Este metodo elimina los null de la lista de Strips, para arreglo del BUG PRINCIPAL es necesario cambiarlo
+     */
     public void calculateStrips(){
         for(String strip : stripInfoList){
             if(strip != null) {
@@ -137,17 +137,16 @@ public class StripManager {
         ArrayList<String> stripInformation = stripInformationIdentifier(stripInfo, 0);
         int modulesAmount = modulesCounter(stripInfo);
         stripInformation = new ArrayList<>(stripInformation.subList(0, modulesAmount));
-        ArrayList<String> stripInformationAux = new ArrayList<String>();
-        for(int i = 0; i < stripInformation.size(); i++){
-            String element = stripInformation.get(i);
-            if(!element.equals(""))
+        ArrayList<String> stripInformationAux = new ArrayList<>();
+        for (String element : stripInformation) {
+            if (!element.equals(""))
                 stripInformationAux.add(element);
         }
         return stripGenerator(stripInformationAux);
     }
 
     private ArrayList<String> stripInformationIdentifier(String stripInfo, int index){
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
         String stripInfoModule = "";
         for(; index < stripInfo.length(); index++){
             char element = stripInfo.charAt(index);
@@ -161,7 +160,7 @@ public class StripManager {
                 stripInfoModule += element;
             }
         }
-        stripInfoModule.replaceAll("\\s+", "");
+        stripInfoModule = stripInfoModule.replaceAll("\\s+", "");
         list.add(stripInfoModule);
         return list;
     }
@@ -240,7 +239,7 @@ public class StripManager {
                     return new TriangleV2Strip(stripAmount, diameter, sides, sideA, sideB, hook);
                 default:
                     diameter = stripInformation.get(1);
-                    ArrayList<String> modifiersList = new ArrayList<String>();
+                    ArrayList<String> modifiersList = new ArrayList<>();
                     for(int i = 2; i < stripInformation.size(); i++)
                         modifiersList.add(stripInformation.get(i));
                     return new BarStrip(stripAmount, diameter, modifiersList);
@@ -248,14 +247,13 @@ public class StripManager {
         }
     }
 
-    //test methods
-
-    public String[] getStripList(){
-        String[] list = new String[stripList.size()];
-        int index = 0;
+    public ArrayList<Double> getStripConvertedList(){
+        ArrayList<Double> list = new ArrayList<Double>();
         for(Strip strip : stripList){
-            list[index] = String.valueOf(strip.getSize());
-            index++;
+            int amount = strip.getAmount();
+            for(int i = 0; i < amount; i++){
+                list.add(strip.getSize());
+            }
         }
         return list;
     }

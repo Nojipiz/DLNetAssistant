@@ -14,8 +14,8 @@ public abstract class Strip {
     public static final String L_HOOK_ID = "L";
 
     private int amount;
-    private String diameter;
     private double sizeInMeters;
+    private String diameter;
 
     public Strip(int amount, String diameter){
         this.amount = amount;
@@ -32,6 +32,10 @@ public abstract class Strip {
         return this.amount;
     }
 
+    public String getDiameter(){
+        return this.diameter;
+    }
+
     public static String correctNumber(String number){
         return (number.charAt(0) == '.') ? (CERO + number) : (number);
     }
@@ -44,6 +48,10 @@ public abstract class Strip {
         result=Math.round(result);
         result=(result/Math.pow(10, decimalNumber))+integerPart;
         return result;
+    }
+
+    protected void setSizeInMeter(double sizeInMeters){
+        this.sizeInMeters = sizeInMeters;
     }
 
 }

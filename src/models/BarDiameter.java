@@ -30,7 +30,7 @@ public enum BarDiameter {
     private double weightPerMeter;
     private String subIndicator;
 
-    private BarDiameter(String indicator, String subIndicator, double weightPerMeter){
+    BarDiameter(String indicator, String subIndicator, double weightPerMeter){
         this.indicator = indicator;
         this.weightPerMeter = weightPerMeter;
         this.subIndicator = subIndicator;
@@ -38,6 +38,10 @@ public enum BarDiameter {
 
     public String getIndicator(){
         return this.indicator;
+    }
+
+    public String getSubIndicator(){
+        return this.subIndicator;
     }
 
     public double getWeightPerMeter(){

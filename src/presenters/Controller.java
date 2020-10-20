@@ -1,6 +1,7 @@
 package presenters;
 
 import models.StripManager;
+import models.core.OptimizationManager;
 import views.Console;
 import views.DliReader;
 
@@ -11,13 +12,14 @@ public class Controller {
     private Console console;
     private StripManager stripManager;
     private DliReader dliReader;
+    private OptimizationManager optimizationManager;
 
     private Controller(){
         console = new Console();
         readingDef();
         contentRead();
         stripCalc();
-        stripPrint();
+        stripConvertion();
     }
 
     private void readingDef(){
@@ -50,11 +52,11 @@ public class Controller {
         }
     }
 
-    private void stripPrint(){
-        console.showContent(stripManager.getStripList());
+    private void stripConvertion(){
+        //optimizationManager = new OptimizationManager(stripManager.getStripConvertedList());
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         new Controller();
     }
 }

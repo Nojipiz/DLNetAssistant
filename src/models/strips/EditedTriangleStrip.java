@@ -2,17 +2,12 @@ package models.strips;
 
 public class EditedTriangleStrip extends Strip{
 
-    private int amount;
-    private String diameter;
     private String sides;
     private String hook;
     private String height;
-    private double sizeInMeters;
 
     public EditedTriangleStrip(int amount, String diameter, String sides,String height, String hook){
         super(amount, diameter);
-        this.amount = amount;
-        this.diameter = diameter;
         this.sides = sides;
         this.height = height;
         this.hook = hook;
@@ -30,6 +25,7 @@ public class EditedTriangleStrip extends Strip{
         double g = Double.parseDouble(Strip.correctNumber(hook));
         double side = Math.sqrt(Math.pow(Math.abs(one - two) / 2, 2) + Math.pow(h, 2)) * 2;
         double tempTotalSize = one + two + (2 * g) + side;
-        sizeInMeters = Strip.roundDoubles(tempTotalSize, 2);
+        double sizeInMeters = Strip.roundDoubles(tempTotalSize, 2);
+        super.setSizeInMeter(sizeInMeters);
     }
 }
