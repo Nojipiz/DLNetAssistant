@@ -12,8 +12,7 @@ public class OptimizationManager {
     private double bestSurplus = 400;
     private ArrayList<Piece[]> bestList;
 
-
-    public static final double[] barList = {2, 2.5};
+    public static final double[] barList = {2.77};
 
     public OptimizationManager(ArrayList<Piece> stripList) {
         this.pieceList = stripList;
@@ -29,11 +28,11 @@ public class OptimizationManager {
         }
     }
 
-    private Piece[] mergeThreadsResults(){
+    private ArrayList<Piece> mergeThreadsResults(){
         double bestSurplus = 400;
-        Piece[] bestList = new Piece[0];
+        ArrayList<Piece> bestList = new ArrayList<>();
         for(OptimizationThread thread : threadList){
-            Piece[] list = thread.calculateOptimized();
+            ArrayList<Piece> list = thread.calculateOptimized();
             double surplus = thread.bestSurplus;
             if(surplus == 0)
                 return list;
@@ -47,18 +46,17 @@ public class OptimizationManager {
 
     public void opTest() {
         while(pieceList.size() != 0){
-            Piece[] actualList = mergeThreadsResults();
-            total.add(actualList);
-            pieceList.removeAll(Arrays.asList(actualList));
+            ArrayList<Piece> actualList = mergeThreadsResults();
+            printList(actualList);
+            pieceList.removeAll(actualList);
         }
     }
 
-    public void printResult(){
-        for (Piece[] list : total) {
-            System.out.print("[");
-            for (Piece element : list)
-                System.out.print(element.getSize() + " ");
-            System.out.print("] \n");
+    private void printList( ArrayList<Piece> list){
+        for(Piece element : list){
+            System.out.print(element.getSize());
         }
+        System.out.println();
     }
+
 }

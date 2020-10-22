@@ -14,17 +14,15 @@ public class testSort {
     @Test
     public void test(){
         ArrayList<Piece> list = new ArrayList<>();
-        list.add(new Piece(0.7));
-        list.add(new Piece(0.7));
-        list.add(new Piece(0.3));
-        list.add(new Piece(0.3));
-        list.add(new Piece(0.6));
-        list.add(new Piece(0.6));
-        list.add(new Piece(0.6));
-        list.add(new Piece(0.4));
-        list.add(new Piece(0.4));
+        list.add(new Piece(0.98));
+        list.add(new Piece(0.72));
+        list.add(new Piece(0.72));
+        list.add(new Piece(0.56));
+        list.add(new Piece(0.51));
+        list.add(new Piece(0.51));
+        list.add(new Piece(0.56));
+        list.add(new Piece(0.98));
         OptimizationManager opManager = new OptimizationManager(list);
         opManager.opTest();
-        opManager.printResult();
     }
 }
