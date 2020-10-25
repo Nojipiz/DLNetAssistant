@@ -8,7 +8,6 @@ public class OptimizationThread extends Thread{
     private double barLength;
     private OptimizationManager manager;
     protected double bestSurplus;
-    private ArrayList<Piece> bestList = new ArrayList<>();
 
     private ArrayList<Piece> defList = null;
 
@@ -32,7 +31,7 @@ public class OptimizationThread extends Thread{
         double actualSurplus = number - sum;
         if (actualSurplus < bestSurplus) {
             bestSurplus = actualSurplus;
-            bestList = elements;
+            setList(elements);
         }
         if (sum == number) {
             setList(elements);
@@ -53,11 +52,9 @@ public class OptimizationThread extends Thread{
     }
 
     private void setList(ArrayList<Piece> list){
-        if(defList == null){
-            defList = new ArrayList<>();
-            for(Piece element : list){
-                defList.add(element);
-            }
+        defList = new ArrayList<>();
+        for(Piece element : list) {
+            defList.add(element);
         }
     }
 

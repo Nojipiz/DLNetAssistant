@@ -2,11 +2,14 @@ package presenters;
 
 import models.StripManager;
 import models.core.OptimizationManager;
+import models.core.Piece;
 import views.Console;
 import views.DliReader;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Controller {
     private Console console;

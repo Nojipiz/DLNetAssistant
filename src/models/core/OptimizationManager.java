@@ -12,12 +12,13 @@ public class OptimizationManager {
     private double bestSurplus = 400;
     private ArrayList<Piece[]> bestList;
 
-    public static final double[] barList = {2.77};
+    public static double[] barList = {2.77};
 
     public OptimizationManager(ArrayList<Piece> stripList) {
         this.pieceList = stripList;
         total = new ArrayList<>();
         threadListInit();
+        opTest();
     }
 
     private void threadListInit(){
@@ -53,10 +54,13 @@ public class OptimizationManager {
     }
 
     private void printList( ArrayList<Piece> list){
+        System.out.print("[");
+        double total = 0;
         for(Piece element : list){
-            System.out.print(element.getSize());
+            System.out.print(element.getSize() + " ");
+            total += element.getSize();
         }
-        System.out.println();
+        System.out.println("] Tamaño = " + total);
     }
 
 }
