@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Strip Generator 98%">
+    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Working One Thread, exact match">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/OptimizationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/OptimizationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/OptimizationThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/OptimizationThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/testSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597506940472</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Working One Thread, exact match">
+      <created>1603405874708</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1603405874708</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +299,8 @@
     <MESSAGE value="Added calculateSize" />
     <MESSAGE value="Amount bug solved" />
     <MESSAGE value="Strip Generator 98%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Strip Generator 98%" />
+    <MESSAGE value="Working One Thread, exact match" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working One Thread, exact match" />
   </component>
   <component name="WindowStateProjectService">
     <state x="489" y="83" width="378" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1603224861391">
@@ -326,22 +331,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="402" y="-92" width="653" height="572" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1602104994230" />
-    <state width="1320" height="140" key="GridCell.Tab.0.bottom" timestamp="1603405493852">
+    <state width="1320" height="140" key="GridCell.Tab.0.bottom" timestamp="1603405868120">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1603405493852" />
-    <state width="1320" height="140" key="GridCell.Tab.0.center" timestamp="1603405493851">
+    <state width="1320" height="140" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1603405868120" />
+    <state width="1320" height="140" key="GridCell.Tab.0.center" timestamp="1603405868119">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1603405493851" />
-    <state width="1320" height="140" key="GridCell.Tab.0.left" timestamp="1603405493851">
+    <state width="1320" height="140" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1603405868119" />
+    <state width="1320" height="140" key="GridCell.Tab.0.left" timestamp="1603405868119">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1603405493851" />
-    <state width="1320" height="140" key="GridCell.Tab.0.right" timestamp="1603405493851">
+    <state width="1320" height="140" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1603405868119" />
+    <state width="1320" height="140" key="GridCell.Tab.0.right" timestamp="1603405868120">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1603405493851" />
+    <state width="1320" height="140" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1603405868120" />
     <state width="1320" height="196" key="GridCell.Tab.1.bottom" timestamp="1603404752311">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -362,6 +367,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="134" y="-25" width="1028" height="758" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1602104997358" />
+    <state x="276" y="109" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1603405877323">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="276" y="109" width="804" height="518" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1603405877323" />
     <state width="685" height="379" key="XDebugger.FullValuePopup" timestamp="1597064570072">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
