@@ -16,28 +16,54 @@ public class testSort {
     @Test
     public void test(){
         ArrayList<Piece> list = new ArrayList<>();
+        /*
         list.add(new Piece(40));
         list.add(new Piece(40));
         list.add(new Piece(40));
+        list.add(new Piece(40));
+        list.add(new Piece(40));
+        list.add(new Piece(40));
+        list.add(new Piece(190));
+        list.add(new Piece(190));
+        list.add(new Piece(190));
+        list.add(new Piece(190));
+        list.add(new Piece(220));
+        list.add(new Piece(220));
+        list.add(new Piece(220));
+        list.add(new Piece(220));
+        list.add(new Piece(240));
+        list.add(new Piece(240));
+        list.add(new Piece(240));
+        list.add(new Piece(240));
+        list.add(new Piece(270));
+        list.add(new Piece(270));
+        list.add(new Piece(270));
+        list.add(new Piece(270));
+         */
+        list.add(new Piece(500));
+        list.add(new Piece(500));
+        list.add(new Piece(270));
+        list.add(new Piece(270));
         list.add(new Piece(270));
         list.add(new Piece(270));
         list.add(new Piece(240));
         list.add(new Piece(240));
+        list.add(new Piece(240));
+        list.add(new Piece(240));
         list.add(new Piece(220));
         list.add(new Piece(220));
+        list.add(new Piece(220));
+        list.add(new Piece(220));
+        list.add(new Piece(190));
+        list.add(new Piece(190));
         list.add(new Piece(190));
         list.add(new Piece(190));
         list.add(new Piece(40));
         list.add(new Piece(40));
         list.add(new Piece(40));
-        list.add(new Piece(270));
-        list.add(new Piece(270));
-        list.add(new Piece(240));
-        list.add(new Piece(240));
-        list.add(new Piece(220));
-        list.add(new Piece(220));
-        list.add(new Piece(190));
-        list.add(new Piece(190));
+        list.add(new Piece(40));
+        list.add(new Piece(40));
+        list.add(new Piece(40));
         OptimizationManager opManager = new OptimizationManager(list);
     }
 }

@@ -24,10 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Thread One Working">
+    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Optimized Time">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/OptimizationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/OptimizationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/OptimizationThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/OptimizationThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/testSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603662028494</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Optimized Time">
+      <created>1604400534374</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604400534374</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,7 +321,8 @@
     <MESSAGE value="Strip Generator 98%" />
     <MESSAGE value="Working One Thread, exact match" />
     <MESSAGE value="Thread One Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Thread One Working" />
+    <MESSAGE value="Optimized Time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized Time" />
   </component>
   <component name="WindowStateProjectService">
     <state x="489" y="83" width="378" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1603224861391">
@@ -351,22 +357,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="402" y="-92" width="653" height="572" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1602104994230" />
-    <state width="1320" height="182" key="GridCell.Tab.0.bottom" timestamp="1604400159161">
+    <state width="1320" height="182" key="GridCell.Tab.0.bottom" timestamp="1604401193923">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="182" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604400159161" />
-    <state width="1320" height="182" key="GridCell.Tab.0.center" timestamp="1604400159160">
+    <state width="1320" height="182" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604401193923" />
+    <state width="1320" height="182" key="GridCell.Tab.0.center" timestamp="1604401193922">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="182" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604400159160" />
-    <state width="1320" height="182" key="GridCell.Tab.0.left" timestamp="1604400159160">
+    <state width="1320" height="182" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604401193922" />
+    <state width="1320" height="182" key="GridCell.Tab.0.left" timestamp="1604401193921">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="182" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604400159160" />
-    <state width="1320" height="182" key="GridCell.Tab.0.right" timestamp="1604400159161">
+    <state width="1320" height="182" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604401193921" />
+    <state width="1320" height="182" key="GridCell.Tab.0.right" timestamp="1604401193922">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="182" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604400159161" />
+    <state width="1320" height="182" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604401193922" />
     <state width="1320" height="196" key="GridCell.Tab.1.bottom" timestamp="1603404752311">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -387,10 +393,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="107" y="6" width="1028" height="758" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1603661870266" />
-    <state x="272" y="73" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1603662067342">
+    <state x="270" y="55" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1604400540631">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="272" y="73" width="804" height="518" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1603662067342" />
+    <state x="270" y="55" width="804" height="518" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1604400540631" />
     <state width="685" height="379" key="XDebugger.FullValuePopup" timestamp="1597064570072">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
