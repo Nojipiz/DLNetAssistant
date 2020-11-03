@@ -12,7 +12,7 @@ public class OptimizationManager {
     private double bestSurplus = 400;
     private ArrayList<Piece[]> bestList;
 
-    public static double[] barList = {2.77};
+    public static double[] barList = {1000};
 
     public OptimizationManager(ArrayList<Piece> stripList) {
         this.pieceList = stripList;

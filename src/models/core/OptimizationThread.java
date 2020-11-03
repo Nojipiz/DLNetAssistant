@@ -33,10 +33,7 @@ public class OptimizationThread extends Thread{
             bestSurplus = actualSurplus;
             setList(elements);
         }
-        if (sum == number) {
-            setList(elements);
-        }
-         else {
+        else {
             for (Piece element : pieceList) {
                 if (!elements.contains(element)) {
                     sum += element.getSize();
@@ -45,6 +42,8 @@ public class OptimizationThread extends Thread{
                         opCore(number, elements, sum, pieceList);
                         elements.remove(elements.indexOf(element));
                     }
+                    else
+                        return;
                     sum -= element.getSize();
                 }
             }
