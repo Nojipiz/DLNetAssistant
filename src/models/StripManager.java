@@ -218,7 +218,6 @@ public class StripManager {
                     diameter = stripInformation.get(2);
                     weight = stripInformation.get(3);
                     return new ChipaStrip(stripAmount, diameter, weight);
-                    //ZIG_ZAG mas muestras
                 case STRIP_ZIGZAG:
                     diameter = stripInformation.get(2);
                     height = stripInformation.get(3);
@@ -247,14 +246,7 @@ public class StripManager {
         }
     }
 
-    public ArrayList<Double> getStripConvertedList(){
-        ArrayList<Double> list = new ArrayList<Double>();
-        for(Strip strip : stripList){
-            int amount = strip.getAmount();
-            for(int i = 0; i < amount; i++){
-                list.add(strip.getSize());
-            }
-        }
-        return list;
+    public ArrayList<Strip> getStripList(){
+        return this.stripList;
     }
 }

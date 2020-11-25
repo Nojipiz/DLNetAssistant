@@ -1,21 +1,18 @@
 package presenters;
 
 import models.StripManager;
-import models.core.OptimizationManager;
-import models.core.Piece;
+import models.core.Optimizator;
 import views.Console;
 import views.DliReader;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Controller {
     private Console console;
     private StripManager stripManager;
     private DliReader dliReader;
-    private OptimizationManager optimizationManager;
+    private Optimizator optimizator;
 
     private Controller(){
         console = new Console();
@@ -56,7 +53,10 @@ public class Controller {
     }
 
     private void stripConvertion(){
-        //optimizationManager = new OptimizationManager(stripManager.getStripConvertedList());
+        optimizator = new Optimizator();
+        optimizator.setStripList(stripManager.getStripList());
+        optimizator.setStockSize(new int[]{600, 1200});
+        optimizator.optimizeStrips(optimizator.getStripLists());
     }
 
     public static void main(String[] args){

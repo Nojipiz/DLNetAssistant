@@ -24,8 +24,21 @@ public abstract class Strip {
 
     public abstract void calculateSize();
 
+    public Strip substractStrip(Strip element){
+        this.amount -= element.amount;
+        return this;
+    }
+
+    public void setAmount(int amount){
+        this.amount = amount;
+    }
+
     public double getSize(){
         return this.sizeInMeters;
+    }
+
+    public double getSizeCentimeters(){
+        return this.sizeInMeters*100;
     }
 
     public int getAmount(){
@@ -53,5 +66,6 @@ public abstract class Strip {
     protected void setSizeInMeter(double sizeInMeters){
         this.sizeInMeters = sizeInMeters;
     }
+
 
 }
