@@ -42,31 +42,29 @@ public class Optimizator {
     }
 
     public void optimizeStrips(ArrayList<ArrayList<Strip>> actualStripList){
-        for(ArrayList<Strip> list : actualStripList)
-            calculateList(list);
+        for(ArrayList<Strip> list : actualStripList){
+            BarList barList = stripToBar(list);
+        }
+    }
+
+    private BarList stripToBar(ArrayList<Strip> list){
+        BarList result = new BarList();
+        for(Strip element : list)
+            result.add(new Bar(element));
+        return result;
     }
 
     private void calculateList(ArrayList<Strip> list){
         for(int element : stockSize){
-            ArrayList<Strip> elements = calculateList(list, element);
-            core(elements);
+            //ArrayList<Bar> elements = calculateList(list, element);
+            //core();
         }
-    }
-
-    private ArrayList<Strip> calculateList(ArrayList<Strip> list, int stock){
-        ArrayList<Strip> result = new ArrayList<>();
-        for(Strip element : list){
-            int times = (int) (stock / element.getSizeCentimeters());
-            if(element.getAmount() < times)
-                times = element.getAmount();
-            element.setAmount(times);
-            result.add(element);
-        }
-        return result;
     }
 
     private ArrayList<Strip> core(ArrayList<Strip> list){
         return null;
     }
+
+
 
 }

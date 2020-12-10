@@ -37,8 +37,8 @@ public abstract class Strip {
         return this.sizeInMeters;
     }
 
-    public double getSizeCentimeters(){
-        return this.sizeInMeters*100;
+    public int getSizeCentimeters(){
+        return (int)(sizeInMeters*100);
     }
 
     public int getAmount(){
