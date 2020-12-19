@@ -7,4 +7,8 @@ public class InvalidStripTypeException extends Exception {
     public InvalidStripTypeException(){
         super(INVALID_STRIP_MSG);
     }
+
+    public void printStackTrace(){
+        System.err.println(INVALID_STRIP_MSG);
+    }
 }

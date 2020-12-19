@@ -18,7 +18,7 @@ public class Console {
         System.out.println(GETFILEPATH_MSG);
         //CAMBIO TEMPORAL PARA AHORRAR TIEMPO
         //String filePath = scan.nextLine();
-        return "/home/nojipiz/Proyectos/DL.net Proyect/Test/ALL_STRIPS.dli";
+        return "/home/nojipiz/Proyectos/DL.net/Test/ALL_STRIPS.dli";
     }
 
     public void showContent(String content){
