@@ -49,8 +49,9 @@ public class Optimizator {
         for(ArrayList<Strip> list : actualStripList){
             BarList barList = stripToBar(list);
             coreManager.setList(barList);
+            System.out.println(coreManager.run());
         }
-        coreManager.run();
+
     }
 
     private BarList stripToBar(ArrayList<Strip> list){

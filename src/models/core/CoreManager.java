@@ -24,9 +24,10 @@ public class CoreManager {
         this.list = list;
     }
 
-    public void run() {
+    public ArrayList<String> run() {
+        ArrayList<String> result = new ArrayList<>();
         try {
-            String command = "python " + localPath + "/src/models/core/coreCutter.py 1.20-1.30 50";
+            String command = "python " + localPath + "/src/models/core/coreCutter.py " + list.toString() +" "+ stockSize[0];
             Process p = Runtime.getRuntime().exec(command);
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
@@ -34,7 +35,8 @@ public class CoreManager {
             System.out.println("Output:\n");
             String s = null;
             while ((s = stdInput.readLine()) != null) {
-                System.out.println(s);
+                if(s.charAt(0) == '[')
+                    result.add(s);
             }
 
             while ((s = stdError.readLine()) != null) {
@@ -43,5 +45,6 @@ public class CoreManager {
         } catch(Exception e){
             e.printStackTrace();
         }
+        return result;
     }
 }

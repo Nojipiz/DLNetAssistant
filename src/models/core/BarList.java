@@ -24,4 +24,13 @@ public class BarList extends ArrayList<Bar> {
         }
         return super.add(e);
     }
+
+    public String toString(){
+        StringBuilder result = new StringBuilder();
+        for(Bar bar : this)
+            result.append(bar.toString() + "-");
+        String resultStr = result.toString();
+        return resultStr.substring(0, resultStr.length()-1);
+    }
+
 }

@@ -25,4 +25,8 @@ public class Bar {
     public int getLength(){
         return length;
     }
+
+    public String toString(){
+        return amount + "." + length;
+    }
 }

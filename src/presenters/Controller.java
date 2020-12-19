@@ -55,7 +55,7 @@ public class Controller {
     private void stripConvertion(){
         optimizator = new Optimizator();
         optimizator.setStripList(stripManager.getStripList());
-        optimizator.setStockSize(new int[]{600, 1200});
+        optimizator.setStockSize(new int[]{1200});
         optimizator.optimizeStrips(optimizator.getStripLists());
     }
 

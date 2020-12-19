@@ -24,19 +24,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Bar implementation">
-      <change afterPath="$PROJECT_DIR$/src/models/core/CoreManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/core/coreCutter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jython_standalone_2_7_2.xml" beforeDir="false" />
+    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Core implementation, test OK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DLAssistant.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/exceptions/InvalidStripTypeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/exceptions/InvalidStripTypeException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/views/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/views/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/InvalidStripTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/InvalidStripTypeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/Optimizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Optimizator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/testSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/Bar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Bar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/BarList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/BarList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/CoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/CoreManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607635441616</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Core implementation, test OK">
+      <created>1608418919225</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608418919225</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,7 +343,8 @@
     <MESSAGE value="Optimized Time" />
     <MESSAGE value="Optimizator and Jython implemented" />
     <MESSAGE value="Bar implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bar implementation" />
+    <MESSAGE value="Core implementation, test OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Core implementation, test OK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="489" y="83" width="378" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1603224861391">
@@ -379,38 +379,38 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="668" y="-112" width="684" height="754" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1606423654067" />
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom" timestamp="1608400291669">
+    <state width="1320" height="184" key="GridCell.Tab.0.bottom" timestamp="1608419997770">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1608400291669" />
-    <state width="1320" height="184" key="GridCell.Tab.0.center" timestamp="1608400291668">
+    <state width="1320" height="184" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1608419997770" />
+    <state width="1320" height="184" key="GridCell.Tab.0.center" timestamp="1608419997769">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1608400291668" />
-    <state width="1320" height="184" key="GridCell.Tab.0.left" timestamp="1608400291668">
+    <state width="1320" height="184" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1608419997769" />
+    <state width="1320" height="184" key="GridCell.Tab.0.left" timestamp="1608419997769">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1608400291668" />
-    <state width="1320" height="184" key="GridCell.Tab.0.right" timestamp="1608400291669">
+    <state width="1320" height="184" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1608419997769" />
+    <state width="1320" height="184" key="GridCell.Tab.0.right" timestamp="1608419997770">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1608400291669" />
-    <state width="1320" height="259" key="GridCell.Tab.1.bottom" timestamp="1608397042886">
+    <state width="1320" height="184" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1608419997770" />
+    <state width="1320" height="259" key="GridCell.Tab.1.bottom" timestamp="1608419820672">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="259" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1608397042886" />
-    <state width="1320" height="259" key="GridCell.Tab.1.center" timestamp="1608397042886">
+    <state width="1320" height="259" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1608419820672" />
+    <state width="1320" height="259" key="GridCell.Tab.1.center" timestamp="1608419820671">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="259" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1608397042886" />
-    <state width="1320" height="259" key="GridCell.Tab.1.left" timestamp="1608397042885">
+    <state width="1320" height="259" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1608419820671" />
+    <state width="1320" height="259" key="GridCell.Tab.1.left" timestamp="1608419820670">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="259" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1608397042885" />
-    <state width="1320" height="259" key="GridCell.Tab.1.right" timestamp="1608397042886">
+    <state width="1320" height="259" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1608419820670" />
+    <state width="1320" height="259" key="GridCell.Tab.1.right" timestamp="1608419820671">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="259" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1608397042886" />
+    <state width="1320" height="259" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1608419820671" />
     <state x="-19" y="-82" width="1028" height="758" key="SettingsEditor" timestamp="1608396874734">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -419,10 +419,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1366.768@0.0.1366.768" timestamp="1607615276322" />
-    <state x="262" y="-17" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1607635501341">
+    <state x="258" y="-53" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1608418946782">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="262" y="-17" width="804" height="518" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1607635501341" />
+    <state x="258" y="-53" width="804" height="518" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1608418946782" />
     <state x="406" y="251" width="540" height="198" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1602104717646">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
