@@ -4,14 +4,14 @@ public abstract class Strip {
 
     public static final String CERO = "0";
     protected static final String MULTIPLY_SYMBOL = "*";
-    public static final String G = "*";
-    public static final String VOID = "";
-    public static final int ONE = 1;
-    public static final int TWO = 2;
-    public static final int THREE = 3;
-    public static final String FLAT_BAR_ID = "OM";
-    public static final String U_HOOK_ID = "U";
-    public static final String L_HOOK_ID = "L";
+    protected static final String G = "*";
+    protected static final String VOID = "";
+    protected static final int ONE = 1;
+    protected static final int TWO = 2;
+    protected static final int THREE = 3;
+    protected static final String FLAT_BAR_ID = "OM";
+    protected static final String U_HOOK_ID = "U";
+    protected static final String L_HOOK_ID = "L";
 
     private int amount;
     private double sizeInMeters;
@@ -24,17 +24,8 @@ public abstract class Strip {
 
     public abstract void calculateSize();
 
-    public Strip substractStrip(Strip element){
-        this.amount -= element.amount;
-        return this;
-    }
-
     public void setAmount(int amount){
         this.amount = amount;
-    }
-
-    public double getSize(){
-        return this.sizeInMeters;
     }
 
     public int getSizeCentimeters(){

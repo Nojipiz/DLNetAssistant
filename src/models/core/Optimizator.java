@@ -3,17 +3,17 @@ package models.core;
 import models.strips.Strip;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Optimizator {
 
     private ArrayList<ArrayList<Strip>> stripLists;
     private int[] stockSize;
     private CoreManager coreManager;
+    private ArrayList<Roll> rollsList;
 
     public Optimizator() {
         stripLists = new ArrayList<>();
-        stripLists = new ArrayList<>();
+        rollsList = new ArrayList<>();
         coreManager = new CoreManager();
         stockSize = new int[1];
     }
@@ -49,10 +49,15 @@ public class Optimizator {
         for(ArrayList<Strip> list : actualStripList){
             BarList barList = stripToBar(list);
             coreManager.setList(barList);
-            System.out.println(coreManager.run());
+            Roll roll = new Roll(barList.get(0).getDiameter(), coreManager.run().toString(), list);
+            rollsList.add(roll);
         }
-
     }
+
+    public ArrayList<Roll> getRollsList(){
+        return rollsList;
+    }
+
 
     private BarList stripToBar(ArrayList<Strip> list){
         BarList result = new BarList();
@@ -61,16 +66,6 @@ public class Optimizator {
         return result;
     }
 
-    private void calculateList(BarList list){
-        for(int element : stockSize){
-            //ArrayList<Bar> elements = calculateList(list, element);
-            //core();
-        }
-    }
-
-    private ArrayList<Strip> core(ArrayList<Strip> list){
-        return null;
-    }
 
 
 

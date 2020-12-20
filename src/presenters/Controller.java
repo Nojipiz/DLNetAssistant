@@ -19,7 +19,8 @@ public class Controller {
         readingDef();
         contentRead();
         stripCalc();
-        stripConvertion();
+        optimizatorConvertion();
+        printResutls();
     }
 
     private void readingDef(){
@@ -52,12 +53,17 @@ public class Controller {
         }
     }
 
-    private void stripConvertion(){
+    private void optimizatorConvertion(){
         optimizator = new Optimizator();
         optimizator.setStripList(stripManager.getStripList());
         optimizator.setStockSize(new int[]{1200});
         optimizator.optimizeStrips(optimizator.getStripLists());
     }
+
+    private void printResutls(){
+        console.printRolls(optimizator.getRollsList());
+    }
+
 
     public static void main(String[] args){
         new Controller();

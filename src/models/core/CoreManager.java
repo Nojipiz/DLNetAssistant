@@ -31,8 +31,6 @@ public class CoreManager {
             Process p = Runtime.getRuntime().exec(command);
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
-
-            System.out.println("Output:\n");
             String s = null;
             while ((s = stdInput.readLine()) != null) {
                 if(s.charAt(0) == '[')

@@ -41,93 +41,32 @@ def gen_data(num_orders):
 
 
 def solve_model(demands, parent_width=100):
-  '''
-      demands = [
-          [1, 3], # [quantity, width]
-          [3, 5],
-          ...
-      ]
-
-      parent_width = integer
-  '''
   num_orders = len(demands)
   solver = newSolver('Cutting Stock', True)
   k,b  = bounds(demands, parent_width)
-
-  # array of boolean declared as int, if y[i] is 1, 
-  # then y[i] Big roll is used, else it was not used
-  y = [ solver.IntVar(0, 1, f'y_{i}') for i in range(k[1]) ] 
-
-  # x[i][j] = 3 means that small-roll width specified by i-th order
-  # must be cut from j-th order, 3 tmies 
+  y = [ solver.IntVar(0, 1, f'y_{i}') for i in range(k[1]) ]
   x = [[solver.IntVar(0, b[i], f'x_{i}_{j}') for j in range(k[1])] \
       for i in range(num_orders)]
   
   unused_widths = [ solver.NumVar(0, parent_width, f'w_{j}') \
-      for j in range(k[1]) ] 
-  
-  # will contain the number of big rolls used
+      for j in range(k[1]) ]
   nb = solver.IntVar(k[0], k[1], 'nb')
 
-  # consntraint: demand fullfilment
-  for i in range(num_orders):  
-    # small rolls from i-th order must be at least as many in quantity
-    # as specified by the i-th order
+  for i in range(num_orders):
     solver.Add(sum(x[i][j] for j in range(k[1])) >= demands[i][0]) 
 
-  # constraint: max size limit
   for j in range(k[1]):
-    # total width of small rolls cut from j-th big roll, 
-    # must not exceed big rolls width
     solver.Add( \
         sum(demands[i][1]*x[i][j] for i in range(num_orders)) \
         <= parent_width*y[j] \
       ) 
 
-    # width of j-th big roll - total width of all orders cut from j-th roll
-    # must be equal to unused_widths[j]
-    # So, we are saying that assign unused_widths[j] the remaining width of j'th big roll
     solver.Add(parent_width*y[j] - sum(demands[i][1]*x[i][j] for i in range(num_orders)) == unused_widths[j])
 
-    '''
-    Book Author's note from page 201:
-    [the following constraint]  breaks the symmetry of multiple solutions that are equivalent 
-    for our purposes: any permutation of the rolls. These permutations, and there are K! of 
-    them, cause most solvers to spend an exorbitant time solving. With this constraint, we 
-    tell the solver to prefer those permutations with more cuts in roll j than in roll j + 1. 
-    The reader is encouraged to solve a medium-sized problem with and without this 
-    symmetry-breaking constraint. I have seen problems take 48 hours to solve without the 
-    constraint and 48 minutes with. Of course, for problems that are solved in seconds, the 
-    constraint will not help; it may even hinder. But who cares if a cutting stock instance 
-    solves in two or in three seconds? We care much more about the difference between two 
-    minutes and three hours, which is what this constraint is meant to address
-    '''
-    if j < k[1]-1: # k1 = total big rolls
-      # total small rolls of i-th order cut from j-th big roll must be >=
-      # totall small rolls of i-th order cut from j+1-th big roll
+    if j < k[1]-1:
       solver.Add(sum(x[i][j] for i in range(num_orders)) >= sum(x[i][j+1] for i in range(num_orders)))
 
-  # find & assign to nb, the number of big rolls used
   solver.Add(nb == solver.Sum(y[j] for j in range(k[1])))
-
-  ''' 
-    minimize total big rolls used
-    let's say we have y = [1, 0, 1]
-    here, total big rolls used are 2. 0-th and 2nd. 1st one is not used. So we want our model to use the 
-    earlier rolls first. i.e. y = [1, 1, 0]. 
-    The trick to do this is to define the cost of using each next roll to be higher. So the model would be
-    forced to used the initial rolls, when available, instead of the next rolls.
-
-    So instead of Minimize ( Sum of y ) or Minimize( Sum([1,1,0]) )
-    we Minimize( Sum([1*1, 1*2, 1*3]) )
-  ''' 
-
-  '''
-  Book Author's note from page 201:
-
-  There are alternative objective functions. For example, we could have minimized the sum of the waste. This makes sense, especially if the demand constraint is formulated as an inequality. Then minimizing the sum of waste Chapter 7  advanCed teChniques
-  will spend more CPU cycles trying to find more efficient patterns that over-satisfy demand. This is especially good if the demand widths recur regularly and storing cut rolls in inventory to satisfy future demand is possible. Note that the running time will grow quickly with such an objective function
-  '''
 
   Cost = solver.Sum((j+1)*y[j] for j in range(k[1]))
 
@@ -143,12 +82,6 @@ def solve_model(demands, parent_width=100):
     solver.WallTime()
 
 def bounds(demands, parent_width=100):
-  '''
-  b = [sum of widths of individual small rolls of each order]
-  T = local var. stores sum of widths of adjecent small-rolls. When the width reaches 100%, T is set to 0 again.
-  k = [k0, k1], k0 = minimum big-rolls requierd, k1: number of big rolls that can be consumed / cut from
-  TT = local var. stores sum of widths of of all small-rolls. At the end, will be used to estimate lower bound of big-rolls
-  '''
   num_orders = len(demands)
   b = []
   T = 0

@@ -1,5 +1,8 @@
 package views;
 
+import models.core.Roll;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Console {
@@ -19,6 +22,12 @@ public class Console {
         //CAMBIO TEMPORAL PARA AHORRAR TIEMPO
         //String filePath = scan.nextLine();
         return "/home/nojipiz/Proyectos/DL.net/Test/ALL_STRIPS.dli";
+    }
+
+    public void printRolls(ArrayList<Roll> list){
+         for(Roll roll : list){
+             System.out.println(roll.toString());
+         }
     }
 
     public void showContent(String content){

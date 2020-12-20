@@ -26,6 +26,10 @@ public class Bar {
         return length;
     }
 
+    public String getDiameter(){
+        return diameter;
+    }
+
     public String toString(){
         return amount + "." + length;
     }
