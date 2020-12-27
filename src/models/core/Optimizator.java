@@ -58,7 +58,6 @@ public class Optimizator {
         return rollsList;
     }
 
-
     private BarList stripToBar(ArrayList<Strip> list){
         BarList result = new BarList();
         for(Strip element : list)

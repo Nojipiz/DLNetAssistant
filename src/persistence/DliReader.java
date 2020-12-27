@@ -1,4 +1,4 @@
-package views;
+package persistence;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -9,7 +9,11 @@ public class DliReader {
 
     private FileReader reader;
 
-    public DliReader(String filePath) throws FileNotFoundException {
+    public DliReader() {
+
+    }
+
+    public void setFilePath(String filePath) throws FileNotFoundException{
         reader = new FileReader(filePath);
     }
 

@@ -47,6 +47,10 @@ public class Roll {
 
     }
 
+    public ArrayList<HashMap<Integer, ArrayList<Integer>>> getSizeList(){
+        return this.rolls;
+    }
+
     public String toString(){
         return "Diameter: " + diameter + " Rolls: " + rolls ;
     }

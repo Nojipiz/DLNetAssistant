@@ -2,34 +2,48 @@ package presenters;
 
 import models.StripManager;
 import models.core.Optimizator;
-import views.Console;
-import views.DliReader;
+import models.core.Roll;
+import models.strips.Strip;
+import views.console.Console;
+import persistence.DliReader;
+import views.gui.PrincipalApp;
 
+import javax.naming.ldap.Control;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Controller {
+
     private Console console;
     private StripManager stripManager;
     private DliReader dliReader;
     private Optimizator optimizator;
+    private static Controller controller;
 
-    private Controller(){
+    // GUI
+
+    private PrincipalApp applicationGUI;
+    private ControllerGUI controllerGUI;
+
+    private void initClasses(){
         console = new Console();
-        readingDef();
-        contentRead();
-        stripCalc();
+        dliReader = new DliReader();
+    }
+
+    private void backendProcess(){
         optimizatorConvertion();
         printResutls();
     }
 
-    private void readingDef(){
-        try {
-            String filePath = console.getFilePath();
-            dliReader = new DliReader(filePath);
-        }catch(FileNotFoundException e){
-            e.printStackTrace();
-        }
+    private void start(){
+        initClasses();
+        applicationGUI = new PrincipalApp();
+        applicationGUI.initApp();
+    }
+
+    private Controller (){
+        controller = this;
     }
 
     private void contentRead(){
@@ -42,7 +56,7 @@ public class Controller {
         }
     }
 
-    private void stripCalc(){
+    private ArrayList<Strip> stripCalc(){
         try {
             stripManager.stripInfo();
             stripManager.cleanStripInfo();
@@ -50,6 +64,7 @@ public class Controller {
             e.printStackTrace();
         }finally {
             stripManager.calculateStrips();
+            return stripManager.getStripList();
         }
     }
 
@@ -64,8 +79,34 @@ public class Controller {
         console.printRolls(optimizator.getRollsList());
     }
 
+    //Controller GUI methods
+
+    protected static Controller singletonController(){
+        return controller;
+    }
+
+    protected void readingDef(String filePath){
+        try {
+            dliReader.setFilePath(filePath);
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+
+    protected ArrayList<Strip> readCalculation(){
+        contentRead();
+        return stripCalc();
+    }
+
+    protected ArrayList<Roll> optimization(){
+        optimizatorConvertion();
+        return optimizator.getRollsList();
+    }
+
+    //Main
 
     public static void main(String[] args){
-        new Controller();
+        controller = new Controller();
+        controller.start();
     }
 }
