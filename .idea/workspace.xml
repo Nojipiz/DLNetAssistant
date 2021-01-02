@@ -27,42 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="GUI working, bug in bar graph">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DLAssistant.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/CoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/CoreManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/Roll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Roll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/BarStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/BarStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/ChipaStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/ChipaStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/CurvedStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/CurvedStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/DualFootStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/DualFootStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/EditedTriangleStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/EditedTriangleStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/HookStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/HookStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/RectangularStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/RectangularStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/RoundStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/RoundStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/Strip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/Strip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/TriangleStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/TriangleStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/TriangleV2Strip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/TriangleV2Strip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/strips/ZigZagStrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/strips/ZigZagStrip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/clear.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/clear.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/folder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/settings.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/settings.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/settings1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/settings1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/initialWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/initialWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" afterDir="false" />
-    </list>
+    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Working" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -357,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609091915085</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Working">
+      <created>1609579884561</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609579884561</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -388,7 +360,8 @@
     <MESSAGE value="Core connected" />
     <MESSAGE value="Results OK" />
     <MESSAGE value="GUI working, bug in bar graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI working, bug in bar graph" />
+    <MESSAGE value="Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
