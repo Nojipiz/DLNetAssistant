@@ -29,4 +29,13 @@ public class TriangleV2Strip extends Strip{
         double sizeInMeters = Strip.roundDoubles(tempSize, 2);
         super.setSizeInMeter(sizeInMeters);
     }
+
+    private String getSizesInfo(){
+        return sideA + sideB + sideC + hook;
+    }
+
+    @Override
+    public String toString(){
+        return  "Cantidad: " + this.getAmount() + " Longitud: " + this.getSizesInfo() + "cm Diametro: " + this.getDiameter();
+    }
 }

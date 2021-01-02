@@ -5,6 +5,8 @@ public class RectangularStrip extends Strip{
     private String sides;
     private String hook;
 
+    private double hookInCentimeters;
+
     public RectangularStrip(int amount, String diameter, String sides, String hook){
         super(amount, diameter);
         this.sides = sides;
@@ -13,7 +15,7 @@ public class RectangularStrip extends Strip{
     }
 
     public void calculateSize(){
-        double weight, height, doubHook;
+        double weight, height;
         int index = sides.indexOf(MULTIPLY_SYMBOL);
         hook = hook.replaceAll("G", "");
         String sideA = Strip.correctNumber(sides.substring(0, index));
@@ -21,9 +23,18 @@ public class RectangularStrip extends Strip{
         hook = Strip.correctNumber(hook);
         weight = Double.parseDouble(sideA);
         height = Double.parseDouble(sideB);
-        doubHook = Double.parseDouble(hook);
-        double tempSize = (weight*2) + (height*2) + (doubHook*2);
+        hookInCentimeters = Double.parseDouble(hook);
+        double tempSize = (weight*2) + (height*2) + (hookInCentimeters*2);
         double sizeInMeters = Strip.roundDoubles(tempSize, 2);
         super.setSizeInMeter(sizeInMeters);
+    }
+
+    private String getSizesInfo(){
+        return sides + " Gancho: " + (int)(hookInCentimeters*100);
+    }
+
+    @Override
+    public String toString(){
+        return  "Cantidad: " + this.getAmount() + " Longitud: " + this.getSizesInfo() + "cm Diametro: " + this.getDiameter();
     }
 }

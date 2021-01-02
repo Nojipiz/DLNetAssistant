@@ -5,6 +5,8 @@ public class TriangleStrip extends Strip{
     private String sides;
     private String hook;
 
+    private double hookInCentimeters;
+
     public TriangleStrip(int amount, String diameter, String sides, String hook){
         super(amount, diameter);
         this.sides = sides;
@@ -21,10 +23,19 @@ public class TriangleStrip extends Strip{
         hook = Strip.correctNumber(hook);
         base = Double.parseDouble(baseA);
         height = Double.parseDouble(sideB);
-        doubHook = Double.parseDouble(hook);
+        hookInCentimeters = Double.parseDouble(hook);
         double sideA = Math.sqrt( Math.pow((base / 2),2) + Math.pow(height, 2));
-        double tempSize = base + (sideA*2) + (doubHook*2);
+        double tempSize = base + (sideA*2) + (hookInCentimeters*2);
         double sizeInMeters = Strip.roundDoubles(tempSize, 2);
         super.setSizeInMeter(sizeInMeters);
+    }
+
+    private String getSizesInfo(){
+        return sides + " Gancho: " + (int)(hookInCentimeters*100);
+    }
+
+    @Override
+    public String toString(){
+        return  "Cantidad: " + this.getAmount() + " Longitud: " + this.getSizesInfo() + "cm Diametro: " + this.getDiameter();
     }
 }

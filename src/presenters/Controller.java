@@ -8,7 +8,6 @@ import views.console.Console;
 import persistence.DliReader;
 import views.gui.PrincipalApp;
 
-import javax.naming.ldap.Control;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,16 +23,10 @@ public class Controller {
     // GUI
 
     private PrincipalApp applicationGUI;
-    private ControllerGUI controllerGUI;
 
     private void initClasses(){
         console = new Console();
         dliReader = new DliReader();
-    }
-
-    private void backendProcess(){
-        optimizatorConvertion();
-        printResutls();
     }
 
     private void start(){
@@ -68,15 +61,11 @@ public class Controller {
         }
     }
 
-    private void optimizatorConvertion(){
+    private void optimizationConversion(ArrayList<Strip> stripList){
         optimizator = new Optimizator();
-        optimizator.setStripList(stripManager.getStripList());
+        optimizator.setStripList(stripList);
         optimizator.setStockSize(new int[]{1200});
         optimizator.optimizeStrips(optimizator.getStripLists());
-    }
-
-    private void printResutls(){
-        console.printRolls(optimizator.getRollsList());
     }
 
     //Controller GUI methods
@@ -89,7 +78,7 @@ public class Controller {
         try {
             dliReader.setFilePath(filePath);
         }catch(FileNotFoundException e){
-            e.printStackTrace();
+            applicationGUI.showException(e);
         }
     }
 
@@ -98,8 +87,8 @@ public class Controller {
         return stripCalc();
     }
 
-    protected ArrayList<Roll> optimization(){
-        optimizatorConvertion();
+    protected ArrayList<Roll> optimization(ArrayList<Strip> stripList){
+        optimizationConversion(stripList);
         return optimizator.getRollsList();
     }
 

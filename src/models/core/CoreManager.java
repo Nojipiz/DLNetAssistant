@@ -26,6 +26,7 @@ public class CoreManager {
 
     public ArrayList<String> run() {
         ArrayList<String> result = new ArrayList<>();
+
         try {
             String command = "python " + localPath + "/src/models/core/coreCutter.py " + list.toString() +" "+ stockSize[0];
             Process p = Runtime.getRuntime().exec(command);

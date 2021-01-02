@@ -29,4 +29,13 @@ public class ZigZagStrip extends Strip{
         sizeInMeters = Strip.roundDoubles(tempSize, 2);
         super.setSizeInMeter(sizeInMeters);
     }
+
+    private String getSizesInfo(){
+        return height + sideA + sideB;
+    }
+
+    @Override
+    public String toString(){
+        return  "Cantidad: " + this.getAmount() + " Longitud: " + this.getSizesInfo() + "cm Diametro: " + this.getDiameter();
+    }
 }

@@ -1,17 +1,12 @@
 package views.gui.boxes;
 
-import com.jfoenix.controls.JFXToggleButton;
 import javafx.geometry.Insets;
-import javafx.scene.chart.Axis;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
-import models.core.Roll;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,7 +19,7 @@ public class BarBox extends GridPane {
     }
 
     private void initComponents(HashMap<Integer, ArrayList<Integer>> roll){
-        getStylesheets().add("styles.css");
+        getStylesheets().add("/styles.css");
         getStyleClass().add("elementBox");
         getStyleClass().add("floatingPane");
         setMinSize(489, 90);

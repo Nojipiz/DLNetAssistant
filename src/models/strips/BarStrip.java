@@ -23,12 +23,8 @@ public class BarStrip extends Strip{
         return Double.parseDouble(Strip.correctNumber(identifier));
     }
 
-    /*
-    private double calculateMultipleMod(){
-        double result = 0;
-        for(String element : modifiers)
-            result += calculateSimpleMod(element);
-        return result;
+    @Override
+    public String toString(){
+        return  "Cantidad: " + this.getAmount() + " Longitud: " + this.getSizeCentimeters() + "cm Diametro: " + this.getDiameter();
     }
-    */
 }

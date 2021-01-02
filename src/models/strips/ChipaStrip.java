@@ -23,4 +23,14 @@ public class ChipaStrip extends Strip{
             }
         }
     }
+
+    private String getWeight(){
+        return this.weight;
+    }
+
+    @Override
+    public String toString(){
+        return  "Cantidad: " + this.getAmount() + " Peso: " + this.getWeight() + "Kg Diametro: " + this.getDiameter();
+    }
+
 }

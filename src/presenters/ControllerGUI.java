@@ -3,9 +3,15 @@ package presenters;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXToggleButton;
+import javafx.beans.Observable;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.layout.VBox;
+import models.core.Roll;
 import views.gui.PrincipalApp;
+
+import java.util.ArrayList;
 
 public class ControllerGUI {
 
@@ -38,8 +44,20 @@ public class ControllerGUI {
         }
     }
 
+    @FXML
+    public void addFile(){
+        String filePath = app.showFileChooser();
+        try {
+            controller.readingDef(filePath);
+            setElements();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     private void setElements(){
         app.setStripElements(controller.readCalculation(), elementsPane);
+        verifySize();
     }
 
     @FXML
@@ -49,6 +67,20 @@ public class ControllerGUI {
 
     @FXML
     public void calculate(){
-        app.setRollBars(controller.optimization(), barsPane);
+        app.clearBarPanel(barsPane);
+        ObservableList<Node> paneElements = elementsPane.getChildren();
+        ArrayList<Roll> rollList = controller.optimization(app.getStripsSelected(paneElements));
+        app.setRollBars(rollList, barsPane);
+    }
+
+     @FXML
+    public void verifySize(){
+        app.verifySize(elementsPane.getChildren(), 1200);
+     }
+
+     @FXML
+    public void clear(){
+        if(app.cleanConfirmation())
+            app.clearPanels(barsPane, elementsPane);
     }
 }

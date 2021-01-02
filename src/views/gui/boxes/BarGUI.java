@@ -5,7 +5,6 @@ import javafx.geometry.Insets;
 import javafx.scene.chart.*;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
-import models.core.Roll;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,7 +27,7 @@ public class BarGUI extends StackedBarChart<String, Number> {
         dataFormatting();
 
         setRotate(90);
-        getStylesheets().add("styles.css");
+        getStylesheets().add("/styles.css");
         getStyleClass().add("barChart");
         getXAxis().setOpacity(0);
         getYAxis().setOpacity(0);

@@ -7,34 +7,41 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import models.strips.Strip;
 
 
 public class ElementBox extends GridPane {
 
     private JFXToggleButton button;
+    private Strip strip;
+    private TextFlow infoMetrics;
 
     public ElementBox(Strip strip){
-        initComponents(strip);
+        this.strip = strip;
+        initComponents();
     }
 
-    private void initComponents(Strip strip){
-        getStylesheets().add("styles.css");
+    private void initComponents(){
+        getStylesheets().add("/styles.css");
         getStyleClass().add("elementBox");
         getStyleClass().add("floatingPane");
         setMinSize(489, 80);
         setPrefHeight(80);
         setPadding(new Insets(12,12,12,12));
 
-        ImageView image = new ImageView("resources/images/folder.png");
+        ImageView image = new ImageView("/images/folder.png");
         image.setFitHeight(40);
         image.setFitWidth(40);
         add(image, 0,0);
 
         add(getSpacer(5), 1, 0);
 
-        Label infoMetrics = new Label(strip.toString());
-        infoMetrics.setFont(Font.font("Cantarell Regular", 20));
+        infoMetrics = new TextFlow();
+        Text text = new Text(strip.toString());
+        text.setFont(Font.font("Cantarell Regular", 17));
+        infoMetrics.getChildren().add(text);
         add(infoMetrics, 2, 0);
 
         add(getSpacer(20),3,0);
@@ -55,11 +62,36 @@ public class ElementBox extends GridPane {
     }
 
     public void setToggledButton(boolean isSelected){
-        if(button.isSelected() != isSelected)
+        if(button.isSelected() != isSelected && !this.isDisable())
             button.setSelected(isSelected);
+    }
+
+    public int getStripSize(){
+        return strip.getSizeCentimeters();
     }
 
     public boolean getButtonState(){
         return button.isSelected();
     }
+
+    public Strip getStrip(){
+        return strip;
+    }
+
+    public void setFullDisable(boolean exp){
+        infoMetrics.getChildren().removeAll();
+        this.setDisable(exp);
+        button.setDisable(exp);
+        if(exp) {
+            Text warningText = new Text("Elemento deshabilitado, su largo total es mayor que la materia prima");
+            warningText.setFont(Font.font("Cantarell Bold", 14));
+            warningText.setStyle("-fx-text-inner-color: red;");
+            infoMetrics.getChildren().add(warningText);
+            getStyleClass().add("disabledElement");
+        }else{
+            infoMetrics.getChildren().add(new Text(strip.toString()));
+            getStyleClass().remove("disabledElement");
+        }
+    }
+
 }
