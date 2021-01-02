@@ -31,7 +31,7 @@ public class ElementBox extends GridPane {
         setPrefHeight(80);
         setPadding(new Insets(12,12,12,12));
 
-        ImageView image = new ImageView("/images/folder.png");
+        ImageView image = new ImageView(imagePath(strip.getClass().toString()));
         image.setFitHeight(40);
         image.setFitWidth(40);
         add(image, 0,0);
@@ -92,6 +92,14 @@ public class ElementBox extends GridPane {
             infoMetrics.getChildren().add(new Text(strip.toString()));
             getStyleClass().remove("disabledElement");
         }
+    }
+
+    private String imagePath(String stripClass){
+        for(StripImages image : StripImages.values()){
+            if(stripClass.contains(image.getId()))
+                return image.getPath();
+        }
+        return StripImages.Bar.getId();
     }
 
 }

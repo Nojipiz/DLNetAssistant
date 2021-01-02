@@ -13,8 +13,13 @@ import java.util.HashMap;
 
 public class BarBox extends GridPane {
 
+    private HashMap<Integer, ArrayList<Integer>> rollInformation;
+    private int amount;
+    private Label amountLabel;
 
     public BarBox(HashMap<Integer, ArrayList<Integer>> roll){
+        amount = 1;
+        rollInformation = roll;
         initComponents(roll);
     }
 
@@ -33,6 +38,11 @@ public class BarBox extends GridPane {
         infoMetrics.setFont(Font.font("Cantarell Regular", 15));
         infoMetrics.setPadding(new Insets(-280,0,0,0));
         add(infoMetrics, 1, 0);
+
+        amountLabel = new Label("X" + amount);
+        amountLabel.setFont(Font.font("Cantarell Regular", 15));
+        amountLabel.setPadding(new Insets(-280,0,0,40));
+        add(amountLabel, 2, 0);
     }
 
     private BarGUI rollEntryToBarGUI(HashMap<Integer, ArrayList<Integer>> roll){
@@ -49,4 +59,12 @@ public class BarBox extends GridPane {
         return label;
     }
 
+    public HashMap<Integer, ArrayList<Integer>> getRollInformation() {
+        return rollInformation;
+    }
+
+    public void addAmount(){
+        amount++;
+        amountLabel.setText("X" + amount);
+    }
 }

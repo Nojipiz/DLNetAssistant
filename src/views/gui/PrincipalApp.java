@@ -90,7 +90,8 @@ public class PrincipalApp extends Application {
     public void setRollBars(ArrayList<Roll> rolls, VBox bars){
         for(Roll roll : rolls) {
             for(HashMap<Integer, ArrayList<Integer>>  element : roll.getSizeList()) {
-                bars.getChildren().add(new BarBox(element));
+                //bars.getChildren().add(new BarBox(element));
+                addRollBar(element, bars);
             }
         }
     }
@@ -138,6 +139,17 @@ public class PrincipalApp extends Application {
         alert.setHeaderText("Error al cargar el archivo");
         alert.setContentText(e.getMessage());
         alert.showAndWait();
+    }
+
+    private void addRollBar(HashMap<Integer, ArrayList<Integer>> element, VBox bars){
+        for(Node node : bars.getChildren()){
+            BarBox box = (BarBox) node;
+            if(box.getRollInformation().equals(element)) {
+                box.addAmount();
+                return;
+            }
+        }
+        bars.getChildren().add(new BarBox(element));
     }
 
 }

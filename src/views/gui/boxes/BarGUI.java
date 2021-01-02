@@ -31,12 +31,14 @@ public class BarGUI extends StackedBarChart<String, Number> {
         getStyleClass().add("barChart");
         getXAxis().setOpacity(0);
         getYAxis().setOpacity(0);
+        getYAxis().setScaleY(1200);
         setHorizontalGridLinesVisible(false);
         setHorizontalZeroLineVisible(false);
         setVerticalGridLinesVisible(false);
         setVerticalZeroLineVisible(false);
         setLegendVisible(false);
-        setPadding(new Insets(-275,150,170,-225));
+        setPadding(new Insets(-275,150,155,-225));
+        //Bug Lines out
         setMinHeight(420);
         setMaxHeight(420);
         setMaxWidth(40);

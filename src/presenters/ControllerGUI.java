@@ -1,19 +1,21 @@
 package presenters;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXToggleButton;
-import javafx.beans.Observable;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import models.core.Roll;
 import views.gui.PrincipalApp;
-
 import java.util.ArrayList;
 
-public class ControllerGUI {
+public class ControllerGUI{
+
+    public static final String CALCULATE = "calculare";
 
     private PrincipalApp app;
     private Controller controller;
@@ -25,7 +27,7 @@ public class ControllerGUI {
     private JFXToggleButton selectAllButton;
 
     @FXML
-    private JFXButton clearButton;
+    private JFXButton clearButton, playButton;
 
     public ControllerGUI(PrincipalApp app){
         this.app = app;
@@ -83,4 +85,5 @@ public class ControllerGUI {
         if(app.cleanConfirmation())
             app.clearPanels(barsPane, elementsPane);
     }
+
 }
