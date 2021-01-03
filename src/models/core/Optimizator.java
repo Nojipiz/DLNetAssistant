@@ -15,11 +15,11 @@ public class Optimizator {
         stripLists = new ArrayList<>();
         rollsList = new ArrayList<>();
         coreManager = new CoreManager();
-        stockSize = new int[1];
     }
 
     public void setStripList(ArrayList<Strip> stripList){
         stripRating(stripList);
+        rollsList = new ArrayList<>();
     }
 
     public void setStockSize(int[] stockSize){
@@ -65,6 +65,13 @@ public class Optimizator {
         return result;
     }
 
+    public ArrayList<String[]> getWaste(){
+        ArrayList<String[]> list = new ArrayList<>();
+        for(Roll roll : rollsList){
+            list.add(new String[]{String.valueOf(roll.getBarAmount()), roll.getDiameter()});
+        }
+        return list;
+    }
 
 
 

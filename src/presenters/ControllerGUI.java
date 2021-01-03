@@ -2,14 +2,16 @@ package presenters;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXToggleButton;
+import exceptions.NotElementsSelectedException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import models.core.Roll;
+import views.gui.Config;
 import views.gui.PrincipalApp;
 import java.util.ArrayList;
 
@@ -20,6 +22,8 @@ public class ControllerGUI{
     private PrincipalApp app;
     private Controller controller;
 
+    private Config configGUI;
+
     @FXML
     private VBox barsPane, elementsPane;
 
@@ -27,10 +31,28 @@ public class ControllerGUI{
     private JFXToggleButton selectAllButton;
 
     @FXML
-    private JFXButton clearButton, playButton;
+    private JFXButton clearButton, playButton, configButton, extraButton;
+
+    @FXML
+    private StackPane stackPane;
 
     public ControllerGUI(PrincipalApp app){
         this.app = app;
+        configGUIInit();
+    }
+
+    private void configGUIInit(){
+        configGUI = new Config(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                controller.setStockSize(configGUI.getSize());
+                app.setUnits(configGUI.getUnits());
+                app.closeConfigWindow();
+            }}, new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                app.closeConfigWindow();
+            }});
     }
 
     @FXML
@@ -57,22 +79,23 @@ public class ControllerGUI{
         }
     }
 
-    private void setElements(){
-        app.setStripElements(controller.readCalculation(), elementsPane);
-        verifySize();
-    }
-
-    @FXML
+     @FXML
     public void selectAllElements(){
         app.selectAllElements(elementsPane.getChildren(),  selectAllButton.isSelected());
     }
 
-    @FXML
+     @FXML
     public void calculate(){
         app.clearBarPanel(barsPane);
+        if(!app.isElementsSelected(elementsPane)) {
+            app.showException(new NotElementsSelectedException(), stackPane);
+            return;
+        }
         ObservableList<Node> paneElements = elementsPane.getChildren();
         ArrayList<Roll> rollList = controller.optimization(app.getStripsSelected(paneElements));
         app.setRollBars(rollList, barsPane);
+        //Waste Dialog
+        app.setWaste(controller.wasteCalculation(), stackPane);
     }
 
      @FXML
@@ -82,8 +105,22 @@ public class ControllerGUI{
 
      @FXML
     public void clear(){
-        if(app.cleanConfirmation())
-            app.clearPanels(barsPane, elementsPane);
+        app.cleanConfirmation(stackPane, barsPane, elementsPane);
+    }
+     @FXML
+    public void showConfigWindow(){
+        try {
+            app.showConfigWindow(configGUI);
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally {
+            configGUI.loadElements(controller.getStockSize(), app.getUnits());
+        }
+     }
+
+    private void setElements(){
+        app.setStripElements(controller.readCalculation(), elementsPane);
+        verifySize();
     }
 
 }

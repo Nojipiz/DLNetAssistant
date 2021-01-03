@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -181,7 +182,7 @@
                         </TextFlow>
                         <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <JFXButton buttonType="RAISED" layoutX="116.0" layoutY="2.0" prefHeight="54.0" prefWidth="70.0" ripplerFill="#5e5e5e">
+                              <JFXButton onAction="#showConfigWindow" buttonType="RAISED" layoutX="116.0" layoutY="2.0" prefHeight="54.0" prefWidth="70.0" ripplerFill="#5e5e5e">
                                  <graphic>
                                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -205,7 +206,7 @@
                   <Insets bottom="20.0" top="20.0" />
                </GridPane.margin>
             </AnchorPane>
-            <JFXButton fx:id="playButton" onAction="#calculate" buttonType="RAISED" ripplerFill="#727272" style="-fx-background-color: TRANSPARENT;" GridPane.columnIndex="3">
+            <JFXButton fx:id="playButton" buttonType="RAISED" onAction="#calculate" ripplerFill="#727272" style="-fx-background-color: TRANSPARENT;" GridPane.columnIndex="3">
                <graphic>
                   <ImageView fitHeight="63.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -219,5 +220,6 @@
             <Insets />
          </opaqueInsets>
       </GridPane>
+      <StackPane fx:id="stackPane" mouseTransparent="true" prefHeight="685.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

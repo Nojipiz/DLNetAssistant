@@ -6,6 +6,7 @@ import models.core.Roll;
 import models.strips.Strip;
 import views.console.Console;
 import persistence.DliReader;
+import views.gui.Config;
 import views.gui.PrincipalApp;
 
 import java.io.FileNotFoundException;
@@ -19,6 +20,7 @@ public class Controller {
     private DliReader dliReader;
     private Optimizator optimizator;
     private static Controller controller;
+    private int stockSize = 1200;
 
     // GUI
 
@@ -63,9 +65,14 @@ public class Controller {
 
     private void optimizationConversion(ArrayList<Strip> stripList){
         optimizator = new Optimizator();
+        optimizator.setStockSize(new int[]{stockSize});
         optimizator.setStripList(stripList);
-        optimizator.setStockSize(new int[]{1200});
         optimizator.optimizeStrips(optimizator.getStripLists());
+    }
+
+    public void setStockSize(int size){
+        stockSize = size;
+        optimizator.setStockSize(new int[]{stockSize});
     }
 
     //Controller GUI methods
@@ -78,7 +85,7 @@ public class Controller {
         try {
             dliReader.setFilePath(filePath);
         }catch(FileNotFoundException e){
-            applicationGUI.showException(e);
+            //applicationGUI.showException(contr);
         }
     }
 
@@ -90,6 +97,14 @@ public class Controller {
     protected ArrayList<Roll> optimization(ArrayList<Strip> stripList){
         optimizationConversion(stripList);
         return optimizator.getRollsList();
+    }
+
+    protected ArrayList<String[]> wasteCalculation(){
+        return optimizator.getWaste();
+    }
+
+    protected int getStockSize(){
+        return stockSize;
     }
 
     //Main

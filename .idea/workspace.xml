@@ -28,24 +28,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Working">
-      <change afterPath="$PROJECT_DIR$/resources/images/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/chipa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/curved.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/dualFoot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/hook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/rectangular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/triangle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/strips/zigzag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/gui/boxes/StripImages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/configWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/NotElementsSelectedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/gui/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/Optimizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Optimizator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/Roll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Roll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +51,9 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="package-info" />
+        <option value="Enum" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -383,6 +377,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Working" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="models.core.CoreManager" memberName="results" />

@@ -54,4 +54,12 @@ public class Roll {
     public String toString(){
         return "Diameter: " + diameter + " Rolls: " + rolls ;
     }
+
+    public String getDiameter() {
+        return diameter;
+    }
+
+    public int getBarAmount(){
+        return rolls.size();
+    }
 }

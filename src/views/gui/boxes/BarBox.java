@@ -10,16 +10,19 @@ import javafx.scene.text.Font;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class BarBox extends GridPane {
 
     private HashMap<Integer, ArrayList<Integer>> rollInformation;
+    private String diameter;
     private int amount;
     private Label amountLabel;
 
-    public BarBox(HashMap<Integer, ArrayList<Integer>> roll){
+    public BarBox(HashMap<Integer, ArrayList<Integer>> roll, String diameter){
         amount = 1;
         rollInformation = roll;
+        this.diameter = diameter;
         initComponents(roll);
     }
 
@@ -34,14 +37,19 @@ public class BarBox extends GridPane {
 
         add(rollEntryToBarGUI(roll), 0,0);
 
-        Label infoMetrics = new Label(roll.toString());
+        String waste = "";
+
+        for(Map.Entry<Integer, ArrayList<Integer>> entry : roll.entrySet())
+            waste = String.valueOf(entry.getKey());
+
+        Label infoMetrics = new Label("Desperdicio: " + waste + "cm Diametro: " +diameter);
         infoMetrics.setFont(Font.font("Cantarell Regular", 15));
         infoMetrics.setPadding(new Insets(-280,0,0,0));
         add(infoMetrics, 1, 0);
 
         amountLabel = new Label("X" + amount);
-        amountLabel.setFont(Font.font("Cantarell Regular", 15));
-        amountLabel.setPadding(new Insets(-280,0,0,40));
+        amountLabel.setFont(Font.font("Cantarell Bold", 18));
+        amountLabel.setPadding(new Insets(-280,0,0,80));
         add(amountLabel, 2, 0);
     }
 
@@ -59,12 +67,15 @@ public class BarBox extends GridPane {
         return label;
     }
 
-    public HashMap<Integer, ArrayList<Integer>> getRollInformation() {
-        return rollInformation;
+    public ArrayList<Object> getRollInformation() {
+        ArrayList<Object> fullInfo = new ArrayList<>();
+        fullInfo.add(rollInformation);
+        fullInfo.add(diameter);
+        return fullInfo;
     }
 
     public void addAmount(){
         amount++;
-        amountLabel.setText("X" + amount);
+        amountLabel.setText("x " + amount + "und");
     }
 }
