@@ -314,7 +314,7 @@ def StockCutter1D(child_rolls, parent_rolls, output_json=True, large_model=True)
         # sometimes the solve_model return a solution that contanis an extra [0.0] entry for big roll
         consumed_big_rolls.remove(big_roll)
         continue
-      unused_width = big_roll[0]
+      unused_width = int(round(big_roll[0]))
       subrolls = []
       for subitem in big_roll[1:]:
         if isinstance(subitem, list):
@@ -429,6 +429,12 @@ def drawGraph(consumed_big_rolls, child_rolls, parent_width):
 
     plt.show()
 
+def stringToBool(cutMethod):
+    if cutMethod == 'True':
+        return True
+    else:
+        return False
+
 
 if __name__ == '__main__':
 
@@ -441,8 +447,9 @@ if __name__ == '__main__':
   #NEW
   #child_rolls = 10.1-0.1
 
-  parentRoll = int(sys.argv[-1])
-  listString = sys.argv[-2]
+  parentRoll = int(sys.argv[-2])
+  listString = sys.argv[-3]
+  cutMethod = stringToBool(sys.argv[-1])
   listArray = listString.split("-")
   child_rolls = list()
 
@@ -453,7 +460,7 @@ if __name__ == '__main__':
 
   parent_rolls = [[10, parentRoll]] 
 
-  consumed_big_rolls = StockCutter1D(child_rolls, parent_rolls, output_json=False, large_model=True)
+  consumed_big_rolls = StockCutter1D(child_rolls, parent_rolls, output_json=False, large_model=cutMethod)
   #print (consumed_big_rolls)
 
   for idx, roll in enumerate(consumed_big_rolls):

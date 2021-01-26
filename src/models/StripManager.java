@@ -1,6 +1,7 @@
 package models;
 import exceptions.InvalidStripTypeException;
 import models.strips.*;
+import utilities.Utilities;
 
 import java.util.ArrayList;
 
@@ -248,5 +249,19 @@ public class StripManager {
 
     public ArrayList<Strip> getStripList(){
         return this.stripList;
+    }
+
+    public static double elementsToWeight(ArrayList<String[]> totalList, double barLength){
+        double total = 0;
+        for(String[] elements : totalList)
+            total += itemWeight(elements);
+        return total * barLength;
+    }
+
+    private static double itemWeight(String[] item){
+        int amount = Utilities.stringToInteger(item[0]);
+        BarDiameter diameter = BarDiameter.getBarType(item[1]);
+        double weight = diameter.getWeightPerMeter();
+        return Utilities.roundDouble((amount * weight), 1);
     }
 }

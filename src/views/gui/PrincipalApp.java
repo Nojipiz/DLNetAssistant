@@ -3,17 +3,12 @@ package views.gui;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
-import com.jfoenix.controls.JFXPopup;
-import com.sun.security.auth.login.ConfigFile;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -26,8 +21,9 @@ import presenters.ControllerGUI;
 import views.gui.boxes.BarBox;
 import views.gui.boxes.ElementBox;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -37,8 +33,11 @@ public class PrincipalApp extends Application {
     private Stage primaryStage;
     private ControllerGUI controllerGUI;
     private Stage configStage;
+    private JFXDialog loadingDialog;
+    private NumberFormat formatter;
 
     protected String units;
+    protected String method = "True";
 
     public static void initApp(){
         launch(new String[]{});
@@ -60,6 +59,7 @@ public class PrincipalApp extends Application {
         primaryStage.show();
         this.primaryStage = primaryStage;
         this.units = "cm";
+        formatter = new DecimalFormat("#0.0");
     }
 
     public String showFileChooser(){
@@ -201,7 +201,7 @@ public class PrincipalApp extends Application {
         bars.getChildren().add(new BarBox(element, diameter));
     }
 
-    public void setWaste(ArrayList<String[]> waste, StackPane stackPane){
+    public void showWaste(ArrayList<String[]> waste, double weight, StackPane stackPane){
         stackPane.setMouseTransparent(false);
         JFXDialogLayout layout = new JFXDialogLayout();
 
@@ -216,6 +216,8 @@ public class PrincipalApp extends Application {
             text.append(element[0] + " Barras de " + element[1]);
             text.append("\n");
         }
+
+        text.append("Peso Total: " + formatter.format(weight) + "Kg");
         body.setText(text.toString());
         layout.setBody(body);
 
@@ -237,9 +239,9 @@ public class PrincipalApp extends Application {
         configStage.setTitle("Configuración");
         configStage.setScene(new Scene(root, 650, 425 ));
         configStage.setMaxWidth(450);
-        configStage.setMaxHeight(480);
+        configStage.setMaxHeight(582);
         configStage.setMinWidth(450);
-        configStage.setMinHeight(480);
+        configStage.setMinHeight(582);
         configStage.setResizable(false);
         configStage.show();
     }
@@ -256,6 +258,15 @@ public class PrincipalApp extends Application {
         return units;
     }
 
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+        controllerGUI.setCutMethod(method);
+    }
+
     public boolean isElementsSelected(VBox elementsPane){
         for(Node e : elementsPane.getChildren()){
             ElementBox element = (ElementBox) e;
@@ -264,5 +275,7 @@ public class PrincipalApp extends Application {
         }
         return false;
     }
+
+
 
 }

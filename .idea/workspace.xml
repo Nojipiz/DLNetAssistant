@@ -27,17 +27,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Working">
-      <change afterPath="$PROJECT_DIR$/resources/configWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/NotElementsSelectedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/gui/Config.java" afterDir="false" />
+    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Configuration working, bug in Optimizator.java">
+      <change afterPath="$PROJECT_DIR$/resources/images/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/mainIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/simpleTitle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/loadingFrame.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/gui/LoadingFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/configWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/configWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/initialWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/initialWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/BarDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BarDiameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/StripManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StripManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/CoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/CoreManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/core/Optimizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Optimizator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/core/Roll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Roll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/coreCutter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/coreCutter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" afterDir="false" />
     </list>
@@ -52,8 +63,8 @@
         <option value="JUnit5 Test Class" />
         <option value="package-info" />
         <option value="Enum" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -93,7 +104,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -342,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609579884561</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Configuration working, bug in Optimizator.java">
+      <created>1609714913898</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609714913898</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,17 +392,10 @@
     <MESSAGE value="Results OK" />
     <MESSAGE value="GUI working, bug in bar graph" />
     <MESSAGE value="Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working" />
+    <MESSAGE value="Configuration working, bug in Optimizator.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configuration working, bug in Optimizator.java" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="models.core.CoreManager" memberName="results" />

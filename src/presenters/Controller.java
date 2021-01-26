@@ -6,7 +6,6 @@ import models.core.Roll;
 import models.strips.Strip;
 import views.console.Console;
 import persistence.DliReader;
-import views.gui.Config;
 import views.gui.PrincipalApp;
 
 import java.io.FileNotFoundException;
@@ -38,6 +37,7 @@ public class Controller {
     }
 
     private Controller (){
+        optimizator = new Optimizator();
         controller = this;
     }
 
@@ -63,8 +63,9 @@ public class Controller {
         }
     }
 
-    private void optimizationConversion(ArrayList<Strip> stripList){
+    private void optimizationConversion(ArrayList<Strip> stripList, String method){
         optimizator = new Optimizator();
+        optimizator.setCutMethod(method);
         optimizator.setStockSize(new int[]{stockSize});
         optimizator.setStripList(stripList);
         optimizator.optimizeStrips(optimizator.getStripLists());
@@ -94,8 +95,8 @@ public class Controller {
         return stripCalc();
     }
 
-    protected ArrayList<Roll> optimization(ArrayList<Strip> stripList){
-        optimizationConversion(stripList);
+    protected ArrayList<Roll> optimization(ArrayList<Strip> stripList, String method){
+        optimizationConversion(stripList, method);
         return optimizator.getRollsList();
     }
 
@@ -107,6 +108,17 @@ public class Controller {
         return stockSize;
     }
 
+    protected String getCutMethod(){
+        return optimizator.getCutMethod();
+    }
+
+    protected void setCutMethod(String method){
+        optimizator.setCutMethod(method);
+    }
+
+    protected double getWeight(ArrayList<String[]> totalList, int barLength){
+        return StripManager.elementsToWeight(totalList, barLength);
+    }
     //Main
 
     public static void main(String[] args){

@@ -9,9 +9,8 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.DepthTest;
-import javafx.scene.control.TextFormatter;
-
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Config {
 
@@ -22,21 +21,21 @@ public class Config {
     private JFXButton cancelButton, acceptButton;
 
     @FXML
-    private JFXCheckBox cmBox, mBox;
+    private JFXCheckBox cmBox, mBox, exactBox, minimizeBox;
 
     @FXML
     private JFXTextField sizeField;
+
+    @FXML
+    private TextField warningField;
 
     public Config(EventHandler<ActionEvent> acceptEvent, EventHandler<ActionEvent> cancelEvent){
         this.acceptEvent = acceptEvent;
         this.cancelEvent = cancelEvent;
     }
 
-    public void loadElements(int size, String units){
-        if(units.equals("cm"))
-            cmBox.setSelected(true);
-        else
-            mBox.setSelected(true);
+    public void loadElements(int size, String units, String method){
+        setCheckBoxes(units, method);
         sizeField.setPromptText(String.valueOf(size));
         IntegerValidator validator = new IntegerValidator("Solo numeros enteros");
         sizeField.setValidators(validator);
@@ -47,9 +46,15 @@ public class Config {
                     sizeField.validate();
             }
         });
-
         acceptButton.setOnAction(acceptEvent);
         cancelButton.setOnAction(cancelEvent);
+    }
+
+    private void setCheckBoxes(String units, String method){
+        if(units.equals("cm"))
+            cmBox.setSelected(true);
+        else
+            mBox.setSelected(true);
         cmBox.setOnAction(actionEvent -> {
             mBox.setSelected(false);
             cmBox.setSelected(true);
@@ -57,6 +62,21 @@ public class Config {
         mBox.setOnAction(actionEvent -> {
             cmBox.setSelected(false);
             mBox.setSelected(true);
+        });
+
+        if(method.equals("True"))
+            minimizeBox.setSelected(true);
+        else
+            exactBox.setSelected(true);
+        minimizeBox.setOnAction(actionEvent -> {
+            exactBox.setSelected(false);
+            minimizeBox.setSelected(true);
+            warningField.setText("");
+        });
+        exactBox.setOnAction(actionEvent -> {
+            minimizeBox.setSelected(false);
+            exactBox.setSelected(true);
+            warningField.setText("Cortes Exactos requiere una gran cantidad de calculos, esto afecta directamente el rendimiento del programa");
         });
     }
 
@@ -68,9 +88,10 @@ public class Config {
     }
 
     public String getUnits(){
-        if(cmBox.isSelected())
-            return "cm";
-        else
-            return "m";
+        return (cmBox.isSelected()) ? ("cm") :("m");
+    }
+
+    public String getMethod(){
+        return (exactBox.isSelected()) ? ("False"):("True");
     }
 }

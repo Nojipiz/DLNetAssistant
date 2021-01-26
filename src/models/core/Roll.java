@@ -36,7 +36,7 @@ public class Roll {
         List<String> tempList = Arrays.asList(rollsData.split("],"));
         for(String element : tempList) {
             String[] list = element.split(", ");
-            int waste = Utilities.stringToInteger(list[0]);
+            int waste = (int) Utilities.stringToDouble(list[0]);
             ArrayList<Integer> intList = new ArrayList<>();
             for(int i = 1; i < list.length; i++)
                 intList.add(Utilities.stringToInteger(list[i]));

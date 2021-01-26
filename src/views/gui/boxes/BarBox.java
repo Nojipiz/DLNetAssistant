@@ -47,7 +47,7 @@ public class BarBox extends GridPane {
         infoMetrics.setPadding(new Insets(-280,0,0,0));
         add(infoMetrics, 1, 0);
 
-        amountLabel = new Label("X" + amount);
+        amountLabel = new Label("x " + amount + "und");
         amountLabel.setFont(Font.font("Cantarell Bold", 18));
         amountLabel.setPadding(new Insets(-280,0,0,80));
         add(amountLabel, 2, 0);

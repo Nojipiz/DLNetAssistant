@@ -47,4 +47,12 @@ public enum BarDiameter {
     public double getWeightPerMeter(){
         return this.weightPerMeter;
     }
+
+    public static BarDiameter getBarType(String type){
+        for(BarDiameter bar : BarDiameter.values()) {
+            if (type.equalsIgnoreCase(bar.getIndicator()) || type.equalsIgnoreCase(bar.getSubIndicator()))
+                return bar;
+        }
+        return null;
+    }
 }

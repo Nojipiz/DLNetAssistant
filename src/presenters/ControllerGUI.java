@@ -12,16 +12,17 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import models.core.Roll;
 import views.gui.Config;
+import views.gui.LoadingFrame;
 import views.gui.PrincipalApp;
 import java.util.ArrayList;
 
 public class ControllerGUI{
 
-    public static final String CALCULATE = "calculare";
+    public static final String CALCULATE = "calculate";
 
     private PrincipalApp app;
     private Controller controller;
-
+    private LoadingFrame loading;
     private Config configGUI;
 
     @FXML
@@ -38,6 +39,8 @@ public class ControllerGUI{
 
     public ControllerGUI(PrincipalApp app){
         this.app = app;
+        loading = new LoadingFrame();
+        loading.start();
         configGUIInit();
     }
 
@@ -47,6 +50,7 @@ public class ControllerGUI{
             public void handle(ActionEvent actionEvent) {
                 controller.setStockSize(configGUI.getSize());
                 app.setUnits(configGUI.getUnits());
+                app.setMethod(configGUI.getMethod());
                 app.closeConfigWindow();
             }}, new EventHandler<ActionEvent>() {
             @Override
@@ -86,16 +90,20 @@ public class ControllerGUI{
 
      @FXML
     public void calculate(){
-        app.clearBarPanel(barsPane);
-        if(!app.isElementsSelected(elementsPane)) {
-            app.showException(new NotElementsSelectedException(), stackPane);
-            return;
-        }
+         loadingInit();
+         if(!app.isElementsSelected(elementsPane)) {
+             loading.setVisible(true);
+             app.showException(new NotElementsSelectedException(), stackPane);
+             return;
+         }
         ObservableList<Node> paneElements = elementsPane.getChildren();
-        ArrayList<Roll> rollList = controller.optimization(app.getStripsSelected(paneElements));
+        ArrayList<Roll> rollList = controller.optimization(app.getStripsSelected(paneElements), app.getMethod());
         app.setRollBars(rollList, barsPane);
         //Waste Dialog
-        app.setWaste(controller.wasteCalculation(), stackPane);
+         loading.setVisible(false);
+         ArrayList<String[]> totalList = controller.wasteCalculation();
+         double totalWeight = controller.getWeight(totalList, controller.getStockSize());
+        app.showWaste(totalList, totalWeight , stackPane);
     }
 
      @FXML
@@ -107,6 +115,7 @@ public class ControllerGUI{
     public void clear(){
         app.cleanConfirmation(stackPane, barsPane, elementsPane);
     }
+
      @FXML
     public void showConfigWindow(){
         try {
@@ -114,13 +123,22 @@ public class ControllerGUI{
         }catch(Exception e){
             e.printStackTrace();
         }finally {
-            configGUI.loadElements(controller.getStockSize(), app.getUnits());
+            configGUI.loadElements(controller.getStockSize(), app.getUnits(), controller.getCutMethod());
         }
      }
 
     private void setElements(){
         app.setStripElements(controller.readCalculation(), elementsPane);
         verifySize();
+    }
+
+    private void loadingInit(){
+        loading.setVisible(true);
+        app.clearBarPanel(barsPane);
+    }
+
+    public void setCutMethod(String method){
+        controller.setCutMethod(method);
     }
 
 }

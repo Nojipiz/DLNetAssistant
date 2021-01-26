@@ -46,6 +46,7 @@ public class Optimizator {
     }
 
     public void optimizeStrips(ArrayList<ArrayList<Strip>> actualStripList){
+
         for(ArrayList<Strip> list : actualStripList){
             BarList barList = stripToBar(list);
             coreManager.setList(barList);
@@ -71,6 +72,14 @@ public class Optimizator {
             list.add(new String[]{String.valueOf(roll.getBarAmount()), roll.getDiameter()});
         }
         return list;
+    }
+
+    public String getCutMethod(){
+        return coreManager.getCutMethod();
+    }
+
+    public void setCutMethod(String method){
+        coreManager.setCutMethod(method);
     }
 
 
