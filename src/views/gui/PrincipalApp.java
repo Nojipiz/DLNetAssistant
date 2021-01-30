@@ -3,6 +3,7 @@ package views.gui;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -33,7 +34,7 @@ public class PrincipalApp extends Application {
     private Stage primaryStage;
     private ControllerGUI controllerGUI;
     private Stage configStage;
-    private JFXDialog loadingDialog;
+    private Stage helpStage;
     private NumberFormat formatter;
 
     protected String units;
@@ -86,9 +87,9 @@ public class PrincipalApp extends Application {
         primaryStage.show();
     }
 
-    public void setStripElements(ArrayList<Strip> list,VBox elements){
+    public void setStripElements(ArrayList<Strip> list, VBox elements, ObservableList<JFXToggleButton> selectAllButton){
         for(Strip e : list)
-            elements.getChildren().add(new ElementBox(e));
+            elements.getChildren().add(new ElementBox(e, elements.getChildren(), selectAllButton ));
     }
 
     public void selectAllElements(ObservableList<Node> elementsPane, boolean isSelected){
@@ -213,11 +214,11 @@ public class PrincipalApp extends Application {
         StringBuilder text = new StringBuilder();
 
         for(String[] element : waste){
-            text.append(element[0] + " Barras de " + element[1]);
+            text.append(element[0] + " Barras de " + element[1] );
             text.append("\n");
         }
 
-        text.append("Peso Total: " + formatter.format(weight) + "Kg");
+        text.append("Peso Total: " + formatter.format(weight/100) + "Kg");
         body.setText(text.toString());
         layout.setBody(body);
 
@@ -244,6 +245,20 @@ public class PrincipalApp extends Application {
         configStage.setMinHeight(582);
         configStage.setResizable(false);
         configStage.show();
+    }
+
+    public void showHelpWindow() throws Exception{
+        helpStage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/helpWindow.fxml"));
+        Parent root = loader.load();
+        helpStage.setTitle("Ayuda");
+        helpStage.setScene(new Scene(root, 600, 600 ));
+        helpStage.setMaxWidth(600);
+        helpStage.setMaxHeight(600);
+        helpStage.setMinWidth(600);
+        helpStage.setMinHeight(600);
+        helpStage.setResizable(false);
+        helpStage.show();
     }
 
     public void closeConfigWindow(){

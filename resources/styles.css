@@ -18,5 +18,66 @@
 }
 
 .disabledElement{
-    -fx-background-color: #c9c9c9;
+    -fx-background-color: black;
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, transparent, transparent, transparent;
+    -fx-background-radius: 0, 0, 0, 0;
+
+    -fx-box-border: none;
+    -fx-border-width: -1;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, transparent, transparent, transparent;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, transparent, transparent, transparent;
+}
+
+.text-area:unfocused .content {
+    -fx-background-color: transparent, transparent, transparent, transparent;
+}
+
+
+.scroll-pane {
+}
+
+.viewport {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, transparent, transparent, transparent;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-border-width: -1;
+}
+
+.content {
+}
+
+.text {
+}
+
+.text-area:focused {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, transparent, transparent, transparent;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-border-width: -1;
+}
+
+.text-area:unfocused {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, transparent, transparent, transparent;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-border-width: -1;
+}
+
+#disclaimer {
+    -fx-text-inner-color: black;
+    -fx-text-fill:black;
+    -fx-font-family: Cantarell;
+    -fx-font-size: 13px;
+    -fx-border-color: transparent;
+    -fx-font-style:bold;
 }

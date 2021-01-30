@@ -124,6 +124,7 @@ public class StripManager {
 
     /* Este metodo elimina los null de la lista de Strips, para arreglo del BUG PRINCIPAL es necesario cambiarlo
      */
+
     public void calculateStrips(){
         for(String strip : stripInfoList){
             if(strip != null) {
@@ -261,7 +262,7 @@ public class StripManager {
     private static double itemWeight(String[] item){
         int amount = Utilities.stringToInteger(item[0]);
         BarDiameter diameter = BarDiameter.getBarType(item[1]);
-        double weight = diameter.getWeightPerMeter();
+        double weight = 1/diameter.getWeightPerMeter(); // De Metros por Kg a Kg por metro
         return Utilities.roundDouble((amount * weight), 1);
     }
 }

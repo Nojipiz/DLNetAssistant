@@ -9,7 +9,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Config {
@@ -36,6 +35,7 @@ public class Config {
 
     public void loadElements(int size, String units, String method){
         setCheckBoxes(units, method);
+        size = (mBox.isSelected()) ? (size / 100) : (size);
         sizeField.setPromptText(String.valueOf(size));
         IntegerValidator validator = new IntegerValidator("Solo numeros enteros");
         sizeField.setValidators(validator);
@@ -55,11 +55,14 @@ public class Config {
             cmBox.setSelected(true);
         else
             mBox.setSelected(true);
+
         cmBox.setOnAction(actionEvent -> {
+            unitsToCentimeters();
             mBox.setSelected(false);
             cmBox.setSelected(true);
         });
         mBox.setOnAction(actionEvent -> {
+            unitsToMeters();
             cmBox.setSelected(false);
             mBox.setSelected(true);
         });
@@ -80,11 +83,35 @@ public class Config {
         });
     }
 
+    private void unitsToCentimeters(){
+        if(cmBox.isSelected())
+            sizeField.setPromptText(String.valueOf(Integer.parseInt(sizeField.getPromptText()) * 100));
+    }
+
+    private void unitsToMeters(){
+        if(mBox.isSelected()) {
+            double number = Math.ceil(Double.parseDouble(sizeField.getPromptText()) / 100);
+            sizeField.setPromptText(String.valueOf((int)number));
+        }
+    }
+
     public int getSize(){
-        if(sizeField.getText() != null && sizeField.getText().matches("\\d+"))
-            return Integer.parseInt(sizeField.getText());
-        else
-            return Integer.parseInt(sizeField.getPromptText());
+        if(validSize()) {
+            if(mBox.isSelected())
+                return Integer.parseInt(sizeField.getText()) * 100; //Conversion de m a cm
+            else
+                return Integer.parseInt(sizeField.getText());
+        }
+        else {
+            if (mBox.isSelected())
+                return Integer.parseInt(sizeField.getPromptText()) * 100;
+            else
+                return Integer.parseInt(sizeField.getPromptText());
+        }
+    }
+    
+    public boolean validSize(){
+        return (sizeField.getText() != null && sizeField.getText().matches("\\d+"));
     }
 
     public String getUnits(){

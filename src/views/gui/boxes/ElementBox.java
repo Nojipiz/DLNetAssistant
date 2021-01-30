@@ -1,10 +1,15 @@
 package views.gui.boxes;
 
 import com.jfoenix.controls.JFXToggleButton;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -17,9 +22,13 @@ public class ElementBox extends GridPane {
     private JFXToggleButton button;
     private Strip strip;
     private TextFlow infoMetrics;
+    private ObservableList<Node> elementsBox; // Parent VBOX
+    private ObservableList<JFXToggleButton> selectAllButton;
 
-    public ElementBox(Strip strip){
+    public ElementBox(Strip strip, ObservableList<Node> elementsBox, ObservableList<JFXToggleButton> selectAllButton){
         this.strip = strip;
+        this.elementsBox = elementsBox;
+        this.selectAllButton = selectAllButton;
         initComponents();
     }
 
@@ -49,6 +58,19 @@ public class ElementBox extends GridPane {
         button = new JFXToggleButton();
         button.setToggleColor(Paint.valueOf("#e5322d"));
         button.setToggleLineColor(Paint.valueOf("#bf312f"));
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                for(Node node : elementsBox){
+                    ElementBox box = (ElementBox) node;
+                    if(!box.getButtonState()) {
+                        selectAllButton.get(0).setSelected(false);
+                        return;
+                    }
+                }
+                selectAllButton.get(0).setSelected(true);
+            }
+        });
         add(button,4,0);
     }
 

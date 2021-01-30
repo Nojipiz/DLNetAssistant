@@ -19,7 +19,7 @@ public class Controller {
     private DliReader dliReader;
     private Optimizator optimizator;
     private static Controller controller;
-    private int stockSize = 1200;
+    private int stockSize;
 
     // GUI
 
@@ -39,6 +39,7 @@ public class Controller {
     private Controller (){
         optimizator = new Optimizator();
         controller = this;
+        stockSize = 1200;
     }
 
     private void contentRead(){

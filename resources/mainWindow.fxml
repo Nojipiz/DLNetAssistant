@@ -99,7 +99,7 @@
                </children></AnchorPane>
             <AnchorPane prefHeight="561.0" prefWidth="529.0" style="-fx-background-color: TRANSPARENT;" styleClass="floatingPane" stylesheets="@styles.css" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
                <children>
-                  <ScrollPane layoutX="3.0" prefHeight="270.0" prefWidth="448.0" style="-fx-background-color: TRANSPARENT;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ScrollPane layoutX="3.0" prefHeight="270.0" prefWidth="448.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
                         <VBox fx:id="elementsPane" alignment="TOP_CENTER" prefHeight="580.0" prefWidth="489.0" spacing="15.0">
                            <padding>
@@ -245,7 +245,7 @@
             </AnchorPane>
             <AnchorPane GridPane.rowIndex="3">
                <children>
-                  <JFXButton fx:id="openButton1" buttonType="RAISED" layoutX="4.0" layoutY="113.0" minWidth="52.0" onAction="#addFile" prefHeight="62.0" prefWidth="70.0" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;">
+                  <JFXButton fx:id="openButton1" buttonType="RAISED" layoutX="4.0" layoutY="113.0" minWidth="52.0" onAction="#showHelpWindow" prefHeight="62.0" prefWidth="70.0" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;">
                      <font>
                         <Font name="Cantarell Regular" size="13.0" />
                      </font>

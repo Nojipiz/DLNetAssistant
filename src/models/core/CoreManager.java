@@ -47,7 +47,7 @@ public class CoreManager {
                     result.add(s);
             }
             //test
-            System.out.println(list.toString());
+            System.out.println(list.toString() + "Stock: " + stockSize[0]);
             System.out.println(result);
 
             while ((s = stdError.readLine()) != null) {
