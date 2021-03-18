@@ -28,19 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Working, bug in waste">
-      <change afterPath="$PROJECT_DIR$/resources/helpWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/initialWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/initialWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DLAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DLAssistant.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/StripManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StripManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/CoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/CoreManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +80,8 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/images" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="/opt/scenebuilder/bin/SceneBuilder" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
