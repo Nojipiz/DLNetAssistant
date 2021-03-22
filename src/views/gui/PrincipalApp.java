@@ -80,16 +80,16 @@ public class PrincipalApp extends Application {
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root, 1200, 600));
         primaryStage.setMaxWidth(3840);
-        primaryStage.setMinWidth(852);
+        primaryStage.setMinWidth(1200);
         primaryStage.setMaxHeight(2160);
-        primaryStage.setMinHeight(480);
+        primaryStage.setMinHeight(600);
         primaryStage.setResizable(true);
         primaryStage.show();
     }
 
     public void setStripElements(ArrayList<Strip> list, VBox elements, ObservableList<JFXToggleButton> selectAllButton){
         for(Strip e : list)
-            elements.getChildren().add(new ElementBox(e, elements.getChildren(), selectAllButton ));
+            elements.getChildren().add(new ElementBox(e, elements.getChildren(), selectAllButton));
     }
 
     public void selectAllElements(ObservableList<Node> elementsPane, boolean isSelected){

@@ -36,8 +36,11 @@ public class ElementBox extends GridPane {
         getStylesheets().add("/styles.css");
         getStyleClass().add("elementBox");
         getStyleClass().add("floatingPane");
-        setMinSize(489, 80);
+
+        setMinSize(470, 80);
+        setMaxSize(470,80);
         setPrefHeight(80);
+
         setPadding(new Insets(12,12,12,12));
 
         ImageView image = new ImageView(imagePath(strip.getClass().toString()));
@@ -123,5 +126,7 @@ public class ElementBox extends GridPane {
         }
         return StripImages.Bar.getId();
     }
+
+
 
 }
