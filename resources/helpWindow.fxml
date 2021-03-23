@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #F3F0EC;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #F3F0EC;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab text="About">
       <content>
         <AnchorPane maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0">
                <children>
-                  <ImageView fitHeight="181.0" fitWidth="199.0" layoutX="212.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="164.0" fitWidth="164.0" layoutX="221.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/devIcon.png" />
                      </image>
@@ -32,7 +32,7 @@
                         <Font name="Cantarell Extra Bold" size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextArea id="disclaimer" blendMode="DARKEN" cacheShape="false" centerShape="false" editable="false" focusColor="TRANSPARENT" layoutX="20.0" layoutY="341.0" pickOnBounds="false" prefHeight="149.0" prefWidth="237.0" scaleShape="false" stylesheets="@styles.css" text="DL-NET es propiedad de Diseño de Soluciones SAS, no existe relacion alguna entre esta empresa y el desarrollador. La extencion .dli es propia del guardado de DL-NET. Este software pretende mejorar la experiencia de usuario.&#10;" unFocusColor="TRANSPARENT">
+                  <JFXTextArea id="disclaimer" blendMode="DARKEN" cacheShape="false" centerShape="false" editable="false" focusColor="TRANSPARENT" layoutX="20.0" layoutY="305.0" pickOnBounds="false" prefHeight="149.0" prefWidth="220.0" scaleShape="false" stylesheets="@styles.css" text="DL-NET es propiedad de Diseño de Soluciones SAS, no existe relacion alguna entre esta empresa y el desarrollador. La extencion .dli es propia del guardado de DL-NET. Este software solo pretende mejorar la experiencia de usuario.&#10;" unFocusColor="TRANSPARENT">
                      <font>
                         <Font name="Cantarell Regular" size="11.0" />
                      </font>
@@ -40,14 +40,14 @@
                         <Insets />
                      </opaqueInsets>
                   </JFXTextArea>
-                  <ImageView accessibleRole="BUTTON" fitHeight="618.0" fitWidth="622.0" layoutX="-8.0" layoutY="121.0" AnchorPane.bottomAnchor="-44.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-14.0">
+                  <ImageView accessibleRole="BUTTON" fitHeight="494.0" fitWidth="622.0" layoutX="-8.0" layoutY="121.0" AnchorPane.bottomAnchor="-44.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-14.0">
                      <image>
-                        <Image url="@images/profileBG.png" />
+                        <Image url="@images/social/helpBg.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="56.0" fitWidth="61.0" layoutX="528.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/social/github.jpg" />
+                        <Image url="@images/social/github.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="530.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
@@ -55,9 +55,9 @@
                         <Image url="@images/social/webPage.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="530.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="53.0" fitWidth="54.0" layoutX="530.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/social/mail.jpg" />
+                        <Image url="@images/social/mail.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="353.0" layoutY="458.0" prefHeight="19.0" prefWidth="168.0" text="nojipiz@protonmail.com" textFill="WHITE">
@@ -75,12 +75,12 @@
                         <Font name="Cantarell Regular" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="166.0" layoutY="531.0" prefHeight="18.0" prefWidth="268.0" text="¿Interesado en software? Contacta via e-mail" textFill="WHITE">
+                  <Label layoutX="169.0" layoutY="506.0" prefHeight="18.0" prefWidth="268.0" text="¿Interesado en software? Contacta via e-mail" textFill="WHITE">
                      <font>
                         <Font name="Cantarell Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Label layoutX="26.0" layoutY="311.0" text="Descargo de Responsabilidad">
+                  <Label layoutX="20.0" layoutY="276.0" text="Descargo de Responsabilidad">
                      <font>
                         <Font name="Cantarell Bold" size="13.0" />
                      </font>

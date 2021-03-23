@@ -1,13 +1,14 @@
 package views.gui.boxes;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.RowConstraints;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,12 +31,23 @@ public class BarBox extends GridPane {
         getStylesheets().add("/styles.css");
         getStyleClass().add("elementBox");
         getStyleClass().add("floatingPane");
-        setMinSize(489, 90);
-        setMaxSize(489, 90);
+        setMinWidth(600);
+        setMinHeight(100);
+        setPrefHeight(100);
         setPadding(new Insets(0,12,12,12));
+        setAlignment(Pos.BASELINE_CENTER);
+
         getRowConstraints().add(new RowConstraints());
 
-        add(rollEntryToBarGUI(roll), 0,0);
+        ColumnConstraints columnOne = new ColumnConstraints();
+        columnOne.setPercentWidth(10);
+        ColumnConstraints columnTwo = new ColumnConstraints();
+        columnTwo.setPercentWidth(90);
+        ColumnConstraints columnThree = new ColumnConstraints();
+        columnThree.setPercentWidth(10);
+        getColumnConstraints().addAll(columnOne, columnTwo, columnThree);
+
+        add(rollEntryToBarGUI(roll), 1,0);
 
         String waste = "";
 
@@ -49,8 +61,8 @@ public class BarBox extends GridPane {
 
         amountLabel = new Label("x " + amount + "und");
         amountLabel.setFont(Font.font("Cantarell Bold", 18));
-        amountLabel.setPadding(new Insets(-280,0,0,80));
-        add(amountLabel, 2, 0);
+        amountLabel.setPadding(new Insets(-280,0,0,350));
+        add(amountLabel, 1, 0);
     }
 
     private BarGUI rollEntryToBarGUI(HashMap<Integer, ArrayList<Integer>> roll){

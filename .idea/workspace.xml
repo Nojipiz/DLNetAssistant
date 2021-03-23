@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="OpTest" />
+      <artifact name="DLAssistant:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -27,12 +27,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="Bug en cambio de resolución">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/PrincipalApp.xml" afterDir="false" />
+    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/devIcon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DLAssistant.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/helpWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/helpWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,11 +86,11 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -158,8 +161,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.PrincipalApp" />
       <item itemvalue="Application.Controller" />
+      <item itemvalue="Application.PrincipalApp" />
       <item itemvalue="JUnit.sortTest" />
       <item itemvalue="JUnit.testSort.test" />
     </list>
@@ -342,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616090916856</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Bug en cambio de resolución">
+      <created>1616433193617</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616433193617</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

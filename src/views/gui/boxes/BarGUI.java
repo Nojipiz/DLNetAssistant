@@ -25,7 +25,6 @@ public class BarGUI extends StackedBarChart<String, Number> {
     private void initComponents(){
         rollsToSeries();
         dataFormatting();
-
         setRotate(90);
         getStylesheets().add("/styles.css");
         getStyleClass().add("barChart");

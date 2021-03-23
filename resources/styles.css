@@ -8,7 +8,6 @@
     -fx-background-color: WHITE;
 }
 
-
 .chart-plot-background{
     -fx-background-color: TRANSPARENT;
 }
@@ -79,5 +78,5 @@
     -fx-font-family: Cantarell;
     -fx-font-size: 13px;
     -fx-border-color: transparent;
-    -fx-font-style:bold;
 }
+

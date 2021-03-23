@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
@@ -17,7 +18,7 @@ import javafx.scene.text.TextFlow;
 import models.strips.Strip;
 
 
-public class ElementBox extends GridPane {
+public class ElementBox extends BorderPane {
 
     private JFXToggleButton button;
     private Strip strip;
@@ -33,12 +34,12 @@ public class ElementBox extends GridPane {
     }
 
     private void initComponents(){
+        GridPane mainPane = new GridPane();
         getStylesheets().add("/styles.css");
         getStyleClass().add("elementBox");
         getStyleClass().add("floatingPane");
 
-        setMinSize(470, 80);
-        setMaxSize(470,80);
+        setMinHeight(70);
         setPrefHeight(80);
 
         setPadding(new Insets(12,12,12,12));
@@ -46,17 +47,17 @@ public class ElementBox extends GridPane {
         ImageView image = new ImageView(imagePath(strip.getClass().toString()));
         image.setFitHeight(40);
         image.setFitWidth(40);
-        add(image, 0,0);
+        mainPane.add(image, 0,0);
 
-        add(getSpacer(5), 1, 0);
+        mainPane.add(getSpacer(5), 1, 0);
 
         infoMetrics = new TextFlow();
         Text text = new Text(strip.toString());
         text.setFont(Font.font("Cantarell Regular", 17));
         infoMetrics.getChildren().add(text);
-        add(infoMetrics, 2, 0);
+        mainPane.add(infoMetrics, 2, 0);
 
-        add(getSpacer(20),3,0);
+        mainPane.add(getSpacer(20),3,0);
 
         button = new JFXToggleButton();
         button.setToggleColor(Paint.valueOf("#e5322d"));
@@ -74,7 +75,8 @@ public class ElementBox extends GridPane {
                 selectAllButton.get(0).setSelected(true);
             }
         });
-        add(button,4,0);
+        this.setCenter(mainPane);
+        this.setRight(button);
     }
 
     private Label getSpacer(int spaces){
