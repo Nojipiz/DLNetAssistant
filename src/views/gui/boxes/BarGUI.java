@@ -13,8 +13,8 @@ import java.util.Map;
 
 public class BarGUI extends StackedBarChart<String, Number> {
 
-    private ArrayList<Series<String, Number>> seriesList;
-    private HashMap<Integer, ArrayList<Integer>> roll;
+    private final ArrayList<Series<String, Number>> seriesList;
+    private final HashMap<Integer, ArrayList<Integer>> roll;
 
     public BarGUI(Axis<Number> axis, Axis<String> axis1, HashMap<Integer, ArrayList<Integer>> roll) {
         super(axis1, axis);

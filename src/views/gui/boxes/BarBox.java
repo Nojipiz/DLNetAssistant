@@ -9,15 +9,14 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import views.gui.ConstantsUI;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class BarBox extends GridPane {
 
-    private HashMap<Integer, ArrayList<Integer>> rollInformation;
-    private String diameter;
+    private final HashMap<Integer, ArrayList<Integer>> rollInformation;
+    private final String diameter;
     private int amount;
     private Label amountLabel;
 
@@ -67,17 +66,7 @@ public class BarBox extends GridPane {
     }
 
     private BarGUI rollEntryToBarGUI(HashMap<Integer, ArrayList<Integer>> roll){
-        BarGUI bar = new BarGUI(new NumberAxis(), new CategoryAxis(), roll);
-        return bar;
-    }
-
-    private Label getSpacer(int spaces){
-        String text = "";
-        for(int i = 0; i < spaces; i++)
-            text += "-";
-        Label label = new Label(text);
-        label.setVisible(false);
-        return label;
+        return new BarGUI(new NumberAxis(), new CategoryAxis(), roll);
     }
 
     public ArrayList<Object> getRollInformation() {

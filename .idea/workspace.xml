@@ -27,16 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/ConstantsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/ConstantsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/StripImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/StripImages.java" afterDir="false" />
-    </list>
+    <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -404,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621741599749</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Improved code readability">
+      <created>1621746039809</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1621746039809</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,7 +439,8 @@
     <MESSAGE value="Bug en cambio de resolución" />
     <MESSAGE value="Code Ops" />
     <MESSAGE value="Code Clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code Clean" />
+    <MESSAGE value="Improved code readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved code readability" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

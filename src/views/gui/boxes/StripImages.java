@@ -13,8 +13,8 @@ public enum StripImages {
     ZigZag("ZigZagStrip", "/images/strips/zigzag.png");
 
 
-    private String id;
-    private String path;
+    private final String id;
+    private final String path;
 
     StripImages(String id, String path){
         this.id = id;

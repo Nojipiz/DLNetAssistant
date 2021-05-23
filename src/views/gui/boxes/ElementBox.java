@@ -75,10 +75,10 @@ public class ElementBox extends BorderPane {
     }
 
     private Label getSpacer(int spaces){
-        String text = "";
+        StringBuilder text = new StringBuilder();
         for(int i = 0; i < spaces; i++)
-            text += "-";
-        Label label = new Label(text);
+            text.append("-");
+        Label label = new Label(text.toString());
         label.setVisible(false);
         return label;
     }
