@@ -6,9 +6,8 @@ import java.util.ArrayList;
 
 public class Optimizator {
 
-    private ArrayList<ArrayList<Strip>> stripLists;
-    private int[] stockSize;
-    private CoreManager coreManager;
+    private final ArrayList<ArrayList<Strip>> stripLists;
+    private final CoreManager coreManager;
     private ArrayList<Roll> rollsList;
 
     public Optimizator() {
@@ -23,7 +22,6 @@ public class Optimizator {
     }
 
     public void setStockSize(int[] stockSize){
-        this.stockSize = stockSize;
         coreManager.setStockSize(stockSize);
     }
 
@@ -50,7 +48,7 @@ public class Optimizator {
         for(ArrayList<Strip> list : actualStripList){
             BarList barList = stripToBar(list);
             coreManager.setList(barList);
-            Roll roll = new Roll(barList.get(0).getDiameter(), coreManager.run().toString(), list);
+            Roll roll = new Roll(barList.get(0).getDiameter(), coreManager.run().toString());
             rollsList.add(roll);
         }
     }

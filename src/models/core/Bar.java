@@ -4,9 +4,9 @@ import models.strips.Strip;
 
 public class Bar {
 
-    private int length;
+    private final int length;
     private int amount;
-    private String diameter;
+    private final String diameter;
 
     public Bar(Strip strip){
         length = strip.getSizeCentimeters();

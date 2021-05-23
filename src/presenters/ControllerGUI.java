@@ -5,18 +5,13 @@ import com.jfoenix.controls.JFXToggleButton;
 import exceptions.NotElementsSelectedException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import models.core.Roll;
 import views.gui.Config;
-import views.gui.LoadingFrame;
 import views.gui.PrincipalApp;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -26,7 +21,6 @@ public class ControllerGUI{
 
     private PrincipalApp app;
     private Controller controller;
-    private LoadingFrame loading;
     private Config configGUI;
 
     @FXML
@@ -43,24 +37,16 @@ public class ControllerGUI{
 
     public ControllerGUI(PrincipalApp app){
         this.app = app;
-        loading = new LoadingFrame();
-        loading.start();
         configGUIInit();
     }
 
     private void configGUIInit(){
-        configGUI = new Config(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                controller.setStockSize(configGUI.getSize());
-                app.setUnits(configGUI.getUnits());
-                app.setMethod(configGUI.getMethod());
-                app.closeConfigWindow();
-            }}, new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                app.closeConfigWindow();
-            }});
+        configGUI = new Config(actionEvent -> {
+            controller.setStockSize(configGUI.getSize());
+            app.setUnits(configGUI.getUnits());
+            app.setMethod(configGUI.getMethod());
+            app.closeConfigWindow();
+        }, actionEvent -> app.closeConfigWindow());
     }
 
     @FXML
@@ -93,7 +79,8 @@ public class ControllerGUI{
     }
 
      @FXML
-    public void calculate(){
+    public synchronized void calculate(){
+         stackPane.setMouseTransparent(false);
          if(!app.isElementsSelected(elementsPane)) {
              app.showException(new NotElementsSelectedException(), stackPane);
              return;
@@ -105,7 +92,6 @@ public class ControllerGUI{
         //Waste Dialog
          ArrayList<String[]> totalList = controller.wasteCalculation();
          double totalWeight = controller.getWeight(totalList, controller.getStockSize());
-         loading.setVisible(false);
         app.showWaste(totalList, totalWeight , stackPane);
     }
 
@@ -146,7 +132,6 @@ public class ControllerGUI{
     }
 
     private void loadingInit(){
-        loading.setVisible(true);
         app.clearBarPanel(barsPane);
     }
 

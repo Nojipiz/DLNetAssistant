@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="DLAssistant" />
+      <artifact name="DLAssistantLinux:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -28,11 +28,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DLAssistant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DLAssistantLinux_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/JavaFXwind.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presenters/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DLAssistant.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/DLAssistant_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/DLAssistant_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DLAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DLAssistant.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/exceptions/InvalidStripTypeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/exceptions/InvalidStripTypeException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/Bar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Bar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/BarList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/BarList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/CoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/CoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/core/coreCutter.py" beforeDir="false" afterPath="$PROJECT_DIR$/coreCutter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/LoadingFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +66,8 @@
         <option value="JUnit5 Test Class" />
         <option value="package-info" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,15 +102,16 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/artifacts/DLAssistantLinux_jar" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.15497382" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin/artifacts/DLAssistantLinux_jar" />
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$/src/resources/images" />
       <recent name="$PROJECT_DIR$/src/resources" />
@@ -99,6 +121,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/src/resources/images" />
       <recent name="$PROJECT_DIR$/src/resources" />
@@ -107,11 +130,24 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Controller">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Controller" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="presenters.Controller" />
       <module name="DLAssistant" />
       <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Java/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="presenters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="presenters.Main" />
+      <module name="DLAssistant" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="presenters.*" />
@@ -160,11 +196,13 @@
     <list>
       <item itemvalue="Application.Controller" />
       <item itemvalue="Application.PrincipalApp" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.sortTest" />
       <item itemvalue="JUnit.testSort.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.testSort.test" />
       </list>
     </recent_temporary>
@@ -356,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616463431765</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Bug en cambio de resolución">
+      <created>1616465496330</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1616465496330</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

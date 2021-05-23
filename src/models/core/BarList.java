@@ -1,13 +1,8 @@
 package models.core;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class BarList extends ArrayList<Bar> {
-
-    public BarList(Collection<Bar> collection){
-        super(collection);
-    }
 
     public BarList(){
         super();
@@ -28,7 +23,7 @@ public class BarList extends ArrayList<Bar> {
     public String toString(){
         StringBuilder result = new StringBuilder();
         for(Bar bar : this)
-            result.append(bar.toString() + "-");
+            result.append(bar.toString()).append("-");
         String resultStr = result.toString();
         return resultStr.substring(0, resultStr.length()-1);
     }

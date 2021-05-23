@@ -36,7 +36,7 @@ public class Controller {
         applicationGUI.initApp();
     }
 
-    private Controller (){
+    public Controller (){
         optimizator = new Optimizator();
         controller = this;
         stockSize = 1200;

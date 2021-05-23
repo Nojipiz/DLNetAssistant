@@ -206,7 +206,7 @@ public class PrincipalApp extends Application {
         stackPane.setMouseTransparent(false);
         JFXDialogLayout layout = new JFXDialogLayout();
 
-        Text header = new Text("CANTIDAD DE MATERIAL NECESARIO");
+        Text header = new Text("CANTIDAD DE MATERIAL NECESARIO" );
         header.setFont(Font.font("Cantarell Bold", 18));
         layout.setHeading(header);
         Text body = new Text();

@@ -11,6 +11,7 @@
     <orderEntry type="library" name="junit-4.13" level="project" />
     <orderEntry type="library" exported="" name="hamcrest-all-1.3" level="project" />
     <orderEntry type="library" exported="" name="jfoenix-9.0.10" level="project" />
-    <orderEntry type="library" exported="" name="JavaFX" level="application" />
+    <orderEntry type="library" exported="" name="JavaFXwind" level="project" />
+    <orderEntry type="library" name="JavaFX" level="application" />
   </component>
 </module>
