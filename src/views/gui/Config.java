@@ -35,7 +35,7 @@ public class Config {
         setCheckBoxes(units, method);
         size = (mBox.isSelected()) ? (size / 100) : (size);
         sizeField.setPromptText(String.valueOf(size));
-        IntegerValidator validator = new IntegerValidator("Solo numeros enteros");
+        IntegerValidator validator = new IntegerValidator(ConstantsUI.ONLY_INTEGERS_TEXT);
         sizeField.setValidators(validator);
         sizeField.focusedProperty().addListener((observableValue, aBoolean, t1) -> {
             if(!t1)
@@ -74,7 +74,7 @@ public class Config {
         exactBox.setOnAction(actionEvent -> {
             minimizeBox.setSelected(false);
             exactBox.setSelected(true);
-            warningField.setText("Cortes Exactos requiere una gran cantidad de calculos, esto afecta directamente el rendimiento del programa");
+            warningField.setText(ConstantsUI.EXACT_CUTS_WARNING_TEXT);
         });
     }
 

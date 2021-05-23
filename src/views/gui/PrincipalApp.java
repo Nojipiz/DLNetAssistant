@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -45,7 +46,7 @@ public class PrincipalApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/initialWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(ConstantsUI.INIT_WINDOW_PATH));
         controllerGUI = new ControllerGUI(this);
         loader.setController(controllerGUI);
         Parent root = loader.load();
@@ -60,6 +61,7 @@ public class PrincipalApp extends Application {
         this.primaryStage = primaryStage;
         this.units = "cm";
         formatter = new DecimalFormat("#0.0");
+        primaryStage.getIcons().add(new Image(ConstantsUI.ICON_PATH));
     }
 
     public String showFileChooser(){
@@ -74,7 +76,7 @@ public class PrincipalApp extends Application {
     }
 
     public void setMainScene() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/mainWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(ConstantsUI.MAIN_WINDOW_PATH));
         loader.setController(controllerGUI);
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root, 1200, 600));
@@ -169,16 +171,16 @@ public class PrincipalApp extends Application {
         stackPane.setMouseTransparent(false);
         JFXDialogLayout layout = new JFXDialogLayout();
 
-        Text header = new Text("Error!");
-        header.setFont(Font.font("Cantarell Bold", 18));
+        Text header = new Text(ConstantsUI.ERROR_TEXT);
+        header.setFont(Font.font(ConstantsUI.FONT_BOLD, 18));
         layout.setHeading(header);
         Text body = new Text();
-        body.setFont(Font.font("Cantarell Regular", 15));
+        body.setFont(Font.font(ConstantsUI.FONT_REGULAR, 15));
         body.setText(e.getMessage());
         layout.setBody(body);
 
         JFXDialog wasteResult = new JFXDialog(stackPane, layout, JFXDialog.DialogTransition.CENTER);
-        JFXButton button = new JFXButton("Aceptar");
+        JFXButton button = new JFXButton(ConstantsUI.ACCEPT_TEXT);
         button.setOnAction(actionEvent -> {
             stackPane.setMouseTransparent(true);
             wasteResult.close();
@@ -205,24 +207,24 @@ public class PrincipalApp extends Application {
         stackPane.setMouseTransparent(false);
         JFXDialogLayout layout = new JFXDialogLayout();
 
-        Text header = new Text("CANTIDAD DE MATERIAL NECESARIO" );
-        header.setFont(Font.font("Cantarell Bold", 18));
+        Text header = new Text(ConstantsUI.MATERIAL_AMOUNT_TEXT);
+        header.setFont(Font.font(ConstantsUI.FONT_BOLD, 18));
         layout.setHeading(header);
         Text body = new Text();
-        body.setFont(Font.font("Cantarell Regular", 15));
+        body.setFont(Font.font(ConstantsUI.FONT_REGULAR, 15));
         StringBuilder text = new StringBuilder();
 
         for(String[] element : waste){
-            text.append(element[0]).append(" Barras de ").append(element[1]);
+            text.append(element[0]).append(ConstantsUI.BARS_OF).append(element[1]);
             text.append("\n");
         }
 
-        text.append("Peso Total: ").append(formatter.format(weight / 100)).append("Kg");
+        text.append(ConstantsUI.TOTAL_WEIGHT).append(formatter.format(weight / 100)).append("Kg");
         body.setText(text.toString());
         layout.setBody(body);
 
         JFXDialog wasteResult = new JFXDialog(stackPane, layout, JFXDialog.DialogTransition.CENTER);
-        JFXButton button = new JFXButton("Aceptar");
+        JFXButton button = new JFXButton(ConstantsUI.ACCEPT_TEXT);
         button.setOnAction(actionEvent -> {
             stackPane.setMouseTransparent(true);
             wasteResult.close();
@@ -233,10 +235,10 @@ public class PrincipalApp extends Application {
 
     public void showConfigWindow(Config config) throws Exception{
         configStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/configWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(ConstantsUI.CONFIG_WINDOW_PATH));
         loader.setController(config);
         Parent root = loader.load();
-        configStage.setTitle("Configuración");
+        configStage.setTitle(ConstantsUI.CONFIGURATION_TEXT);
         configStage.setScene(new Scene(root, 650, 425 ));
         configStage.setMaxWidth(450);
         configStage.setMaxHeight(582);
@@ -248,9 +250,9 @@ public class PrincipalApp extends Application {
 
     public void showHelpWindow() throws Exception{
         Stage helpStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/helpWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(ConstantsUI.HELP_WINDOW_PATH));
         Parent root = loader.load();
-        helpStage.setTitle("Ayuda");
+        helpStage.setTitle(ConstantsUI.HELP_TEXT);
         helpStage.setScene(new Scene(root, 600, 600 ));
         helpStage.setMaxWidth(600);
         helpStage.setMaxHeight(600);

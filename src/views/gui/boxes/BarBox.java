@@ -7,6 +7,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
+import views.gui.ConstantsUI;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -28,9 +29,9 @@ public class BarBox extends GridPane {
     }
 
     private void initComponents(HashMap<Integer, ArrayList<Integer>> roll){
-        getStylesheets().add("/styles.css");
-        getStyleClass().add("elementBox");
-        getStyleClass().add("floatingPane");
+        getStylesheets().add(ConstantsUI.STYLES_PATH);
+        getStyleClass().add(ConstantsUI.STYLES_ELEMENT_BOX);
+        getStyleClass().add(ConstantsUI.STYLES_FLOATING_PANE);
         setMinWidth(600);
         setMinHeight(100);
         setPrefHeight(100);
@@ -54,13 +55,13 @@ public class BarBox extends GridPane {
         for(Map.Entry<Integer, ArrayList<Integer>> entry : roll.entrySet())
             waste = String.valueOf(entry.getKey());
 
-        Label infoMetrics = new Label("Desperdicio: " + waste + "cm Diametro: " +diameter);
-        infoMetrics.setFont(Font.font("Cantarell Regular", 15));
+        Label infoMetrics = new Label(ConstantsUI.WASTE_TEXT + waste + ConstantsUI.CENTIMETERS_AND_DIAMETER +diameter);
+        infoMetrics.setFont(Font.font(ConstantsUI.FONT_REGULAR, 15));
         infoMetrics.setPadding(new Insets(-280,0,0,0));
         add(infoMetrics, 1, 0);
 
-        amountLabel = new Label("x " + amount + "und");
-        amountLabel.setFont(Font.font("Cantarell Bold", 18));
+        amountLabel = new Label("x " + amount + ConstantsUI.UNITS_TEXT);
+        amountLabel.setFont(Font.font(ConstantsUI.FONT_BOLD, 18));
         amountLabel.setPadding(new Insets(-280,0,0,350));
         add(amountLabel, 1, 0);
     }
@@ -88,6 +89,6 @@ public class BarBox extends GridPane {
 
     public void addAmount(){
         amount++;
-        amountLabel.setText("x " + amount + "und");
+        amountLabel.setText("x " + amount + ConstantsUI.UNITS_TEXT);
     }
 }

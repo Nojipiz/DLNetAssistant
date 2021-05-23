@@ -16,7 +16,7 @@ public enum StripImages {
     private String id;
     private String path;
 
-    private StripImages(String id, String path){
+    StripImages(String id, String path){
         this.id = id;
         this.path = path;
     }

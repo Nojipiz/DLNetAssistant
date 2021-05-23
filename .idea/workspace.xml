@@ -28,11 +28,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/StripManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StripManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/ConstantsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/ConstantsUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/BarGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/ElementBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/boxes/StripImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/boxes/StripImages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621741152083</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Code Clean">
+      <created>1621741599749</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1621741599749</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -430,7 +440,8 @@
     <MESSAGE value="Working, bug in waste" />
     <MESSAGE value="Bug en cambio de resolución" />
     <MESSAGE value="Code Ops" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code Ops" />
+    <MESSAGE value="Code Clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Clean" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

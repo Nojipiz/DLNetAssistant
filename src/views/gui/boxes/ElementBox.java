@@ -2,29 +2,27 @@ package views.gui.boxes;
 
 import com.jfoenix.controls.JFXToggleButton;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import models.strips.Strip;
+import views.gui.ConstantsUI;
 
 
 public class ElementBox extends BorderPane {
 
     private JFXToggleButton button;
-    private Strip strip;
+    private final Strip strip;
     private TextFlow infoMetrics;
-    private ObservableList<Node> elementsBox; // Parent VBOX
-    private ObservableList<JFXToggleButton> selectAllButton;
+    private final ObservableList<Node> elementsBox; // Parent VBOX
+    private final ObservableList<JFXToggleButton> selectAllButton;
 
     public ElementBox(Strip strip, ObservableList<Node> elementsBox, ObservableList<JFXToggleButton> selectAllButton){
         this.strip = strip;
@@ -35,9 +33,9 @@ public class ElementBox extends BorderPane {
 
     private void initComponents(){
         GridPane mainPane = new GridPane();
-        getStylesheets().add("/styles.css");
-        getStyleClass().add("elementBox");
-        getStyleClass().add("floatingPane");
+        getStylesheets().add(ConstantsUI.STYLES_PATH);
+        getStyleClass().add(ConstantsUI.STYLES_ELEMENT_BOX);
+        getStyleClass().add(ConstantsUI.STYLES_FLOATING_PANE);
 
         setMinHeight(70);
         setPrefHeight(80);
@@ -53,7 +51,7 @@ public class ElementBox extends BorderPane {
 
         infoMetrics = new TextFlow();
         Text text = new Text(strip.toString());
-        text.setFont(Font.font("Cantarell Regular", 17));
+        text.setFont(Font.font(ConstantsUI.FONT_REGULAR, 17));
         infoMetrics.getChildren().add(text);
         mainPane.add(infoMetrics, 2, 0);
 
@@ -62,18 +60,15 @@ public class ElementBox extends BorderPane {
         button = new JFXToggleButton();
         button.setToggleColor(Paint.valueOf("#e5322d"));
         button.setToggleLineColor(Paint.valueOf("#bf312f"));
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                for(Node node : elementsBox){
-                    ElementBox box = (ElementBox) node;
-                    if(!box.getButtonState()) {
-                        selectAllButton.get(0).setSelected(false);
-                        return;
-                    }
+        button.setOnAction(actionEvent -> {
+            for(Node node : elementsBox){
+                ElementBox box = (ElementBox) node;
+                if(!box.getButtonState()) {
+                    selectAllButton.get(0).setSelected(false);
+                    return;
                 }
-                selectAllButton.get(0).setSelected(true);
             }
+            selectAllButton.get(0).setSelected(true);
         });
         this.setCenter(mainPane);
         this.setRight(button);
