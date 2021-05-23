@@ -17,11 +17,8 @@ public class Utilities {
     public static double stringToDouble(String text){
         if(text != null) {
             text = (text.replaceAll("[\\D]", ""));
-            if (!text.equals("")) {
+            if (!text.equals(""))
                 return Double.parseDouble(text);
-            }
-        }else {
-            return -1;
         }
         return -1;
     }

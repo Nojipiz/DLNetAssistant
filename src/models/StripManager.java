@@ -23,7 +23,7 @@ public class StripManager {
     public static final String STRIP_TRIANGLE = "T";
     public static final String STRIP_TRIANGLE_V2 = "T2";
 
-    private ArrayList<Strip> stripList;
+    private final ArrayList<Strip> stripList;
     private String barInformation;
     private String[] stripInfoList;
 

@@ -28,7 +28,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/models/BarDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BarDiameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/StripManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StripManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gui/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/Config.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -383,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621740996268</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Code Ops">
+      <created>1621741152083</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1621741152083</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

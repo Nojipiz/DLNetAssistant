@@ -34,14 +34,13 @@ public class PrincipalApp extends Application {
     private Stage primaryStage;
     private ControllerGUI controllerGUI;
     private Stage configStage;
-    private Stage helpStage;
     private NumberFormat formatter;
 
     protected String units;
     protected String method = "True";
 
     public static void initApp(){
-        launch(new String[]{});
+        launch();
     }
 
     @Override
@@ -214,11 +213,11 @@ public class PrincipalApp extends Application {
         StringBuilder text = new StringBuilder();
 
         for(String[] element : waste){
-            text.append(element[0] + " Barras de " + element[1] );
+            text.append(element[0]).append(" Barras de ").append(element[1]);
             text.append("\n");
         }
 
-        text.append("Peso Total: " + formatter.format(weight/100) + "Kg");
+        text.append("Peso Total: ").append(formatter.format(weight / 100)).append("Kg");
         body.setText(text.toString());
         layout.setBody(body);
 
@@ -248,7 +247,7 @@ public class PrincipalApp extends Application {
     }
 
     public void showHelpWindow() throws Exception{
-        helpStage = new Stage();
+        Stage helpStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/helpWindow.fxml"));
         Parent root = loader.load();
         helpStage.setTitle("Ayuda");

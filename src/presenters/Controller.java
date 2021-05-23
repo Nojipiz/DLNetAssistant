@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 public class Controller {
 
-    private Console console;
     private StripManager stripManager;
     private DliReader dliReader;
     private Optimizator optimizator;
@@ -23,17 +22,13 @@ public class Controller {
 
     // GUI
 
-    private PrincipalApp applicationGUI;
-
     private void initClasses(){
-        console = new Console();
         dliReader = new DliReader();
     }
 
     private void start(){
         initClasses();
-        applicationGUI = new PrincipalApp();
-        applicationGUI.initApp();
+        PrincipalApp.initApp();
     }
 
     public Controller (){

@@ -4,8 +4,6 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.IntegerValidator;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -13,8 +11,8 @@ import javafx.scene.control.TextField;
 
 public class Config {
 
-    private EventHandler<ActionEvent> acceptEvent;
-    private EventHandler<ActionEvent> cancelEvent;
+    private final EventHandler<ActionEvent> acceptEvent;
+    private final EventHandler<ActionEvent> cancelEvent;
 
     @FXML
     private JFXButton cancelButton, acceptButton;
@@ -39,12 +37,9 @@ public class Config {
         sizeField.setPromptText(String.valueOf(size));
         IntegerValidator validator = new IntegerValidator("Solo numeros enteros");
         sizeField.setValidators(validator);
-        sizeField.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                if(!t1)
-                    sizeField.validate();
-            }
+        sizeField.focusedProperty().addListener((observableValue, aBoolean, t1) -> {
+            if(!t1)
+                sizeField.validate();
         });
         acceptButton.setOnAction(acceptEvent);
         cancelButton.setOnAction(cancelEvent);
