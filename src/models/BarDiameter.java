@@ -26,9 +26,9 @@ public enum BarDiameter {
     TEN("\"D10.0\"", "\"10.0M\"",1.62074),
     ;
 
-    private String indicator;
-    private double weightPerMeter;
-    private String subIndicator;
+    private final String indicator;
+    private final double weightPerMeter;
+    private final String subIndicator;
 
     BarDiameter(String indicator, String subIndicator, double weightPerMeter){
         this.indicator = indicator;

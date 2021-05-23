@@ -28,32 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234eb7bf-966d-4e1c-8b13-66a0ac621cd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DLAssistantLinux_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/JavaFXwind.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presenters/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DLAssistant.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DLAssistant_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/DLAssistant_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DLAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DLAssistant.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/exceptions/InvalidStripTypeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/exceptions/InvalidStripTypeException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/CurvedStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/DualFootStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RectangularStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/RoundStrip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/models/strips/Strip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/production/DLAssistant/presenters/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/mainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/Bar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/Bar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/BarList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/BarList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/CoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/core/CoreManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/core/coreCutter.py" beforeDir="false" afterPath="$PROJECT_DIR$/coreCutter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenters/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenters/ControllerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/LoadingFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gui/PrincipalApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/BarDiameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BarDiameter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -401,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616465496330</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Code Ops">
+      <created>1621740996268</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621740996268</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,7 +418,8 @@
     <MESSAGE value="Configuration working, bug in Optimizator.java" />
     <MESSAGE value="Working, bug in waste" />
     <MESSAGE value="Bug en cambio de resolución" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug en cambio de resolución" />
+    <MESSAGE value="Code Ops" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Ops" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
