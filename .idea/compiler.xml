@@ -6,6 +6,15 @@
         <sourceOutputDir name="bin" />
         <sourceTestOutputDir name="bin" />
       </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="DLAssistant" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DLAssistant" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

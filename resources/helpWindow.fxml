@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #F3F0EC;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #F3F0EC;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab text="About">
       <content>
@@ -20,6 +21,11 @@
                   <ImageView fitHeight="164.0" fitWidth="164.0" layoutX="221.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/devIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView accessibleRole="BUTTON" fitHeight="494.0" fitWidth="622.0" layoutX="-8.0" layoutY="121.0" AnchorPane.bottomAnchor="-44.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-14.0">
+                     <image>
+                        <Image url="@images/social/helpBg.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="221.0" layoutY="222.0" text="Desarrollador de Software">
@@ -32,7 +38,53 @@
                         <Font name="Cantarell Extra Bold" size="20.0" />
                      </font>
                   </Label>
-                  <JFXTextArea id="disclaimer" blendMode="DARKEN" cacheShape="false" centerShape="false" editable="false" focusColor="TRANSPARENT" layoutX="20.0" layoutY="305.0" pickOnBounds="false" prefHeight="149.0" prefWidth="220.0" scaleShape="false" stylesheets="@styles.css" text="DL-NET es propiedad de Diseño de Soluciones SAS, no existe relacion alguna entre esta empresa y el desarrollador. La extencion .dli es propia del guardado de DL-NET. Este software solo pretende mejorar la experiencia de usuario.&#10;" unFocusColor="TRANSPARENT">
+                  <JFXButton fx:id="webBtn" alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutX="385.0" layoutY="306.0" prefHeight="65.0" prefWidth="266.0" style="-fx-background-color: TRANSPARENT;" text="nojipiz.github.io" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/social/webPage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Inconsolata Regular" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="emailBtn" contentDisplay="RIGHT" layoutX="189.0" layoutY="453.0" prefHeight="67.0" prefWidth="315.0" style="-fx-background-color: TRANSPARENT;" text="nojipiz@protonmail.com" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/social/mail.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Inconsolata Regular" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="gitBtn" alignment="CENTER" contentDisplay="RIGHT" layoutX="247.0" layoutY="378.0" prefHeight="67.0" prefWidth="353.0" style="-fx-background-color: TRANSPARENT;" text="github.com/Nojipiz" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/social/github.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Inconsolata Regular" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="138.0" layoutY="529.0" prefHeight="18.0" prefWidth="268.0" text="¿Interesado en software? Contacta via e-mail" textFill="WHITE">
+                     <font>
+                        <Font name="Cantarell Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="252.0" text="Descargo de Responsabilidad">
+                     <font>
+                        <Font name="Cantarell Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea id="disclaimer" blendMode="DARKEN" cacheShape="false" centerShape="false" editable="false" focusColor="TRANSPARENT" layoutX="20.0" layoutY="282.0" pickOnBounds="false" prefHeight="149.0" prefWidth="220.0" scaleShape="false" stylesheets="@styles.css" text="DL-NET es propiedad de Diseño de Soluciones SAS, no existe relacion alguna entre esta empresa y el desarrollador. La extencion .dli es propia del guardado de DL-NET. Este software solo pretende mejorar la experiencia de usuario.&#10;" unFocusColor="TRANSPARENT">
                      <font>
                         <Font name="Cantarell Regular" size="11.0" />
                      </font>
@@ -40,51 +92,6 @@
                         <Insets />
                      </opaqueInsets>
                   </JFXTextArea>
-                  <ImageView accessibleRole="BUTTON" fitHeight="494.0" fitWidth="622.0" layoutX="-8.0" layoutY="121.0" AnchorPane.bottomAnchor="-44.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-14.0">
-                     <image>
-                        <Image url="@images/social/helpBg.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="56.0" fitWidth="61.0" layoutX="528.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/social/github.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="530.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/social/webPage.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="53.0" fitWidth="54.0" layoutX="530.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/social/mail.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="353.0" layoutY="458.0" prefHeight="19.0" prefWidth="168.0" text="nojipiz@protonmail.com" textFill="WHITE">
-                     <font>
-                        <Font name="Cantarell Regular" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="412.0" layoutY="319.0" prefHeight="19.0" prefWidth="109.0" text="nojipiz.github.io" textFill="WHITE">
-                     <font>
-                        <Font name="Cantarell Regular" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="391.0" layoutY="391.0" prefHeight="19.0" prefWidth="131.0" text="github.com/Nojipiz" textFill="WHITE">
-                     <font>
-                        <Font name="Cantarell Regular" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="169.0" layoutY="506.0" prefHeight="18.0" prefWidth="268.0" text="¿Interesado en software? Contacta via e-mail" textFill="WHITE">
-                     <font>
-                        <Font name="Cantarell Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="20.0" layoutY="276.0" text="Descargo de Responsabilidad">
-                     <font>
-                        <Font name="Cantarell Bold" size="13.0" />
-                     </font>
-                  </Label>
                </children></AnchorPane>
       </content>
     </Tab>

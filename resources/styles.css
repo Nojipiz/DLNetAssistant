@@ -52,11 +52,7 @@
     -fx-border-width: -1;
 }
 
-.content {
-}
 
-.text {
-}
 
 .text-area:focused {
     -fx-background-insets: 0;
@@ -70,6 +66,11 @@
     -fx-background-color: transparent, transparent, transparent, transparent;
     -fx-background-radius: 0, 0, 0, 0;
     -fx-border-width: -1;
+}
+
+.info-label{
+    -fx-background-color:#e5322d;
+    -fx-text-inner-color: white;
 }
 
 #disclaimer {

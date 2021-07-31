@@ -25,22 +25,22 @@
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="787.0" minWidth="10.0" prefWidth="238.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="673.0" minWidth="10.0" prefWidth="232.0" />
-            <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="90.0" minWidth="0.0" prefWidth="36.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="570.0" minWidth="10.0" prefWidth="226.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="249.0" />
             <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="151.0" minHeight="128.0" prefHeight="128.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="500.0" minHeight="140.0" prefHeight="161.0" valignment="CENTER" />
-          <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="245.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="177.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="500.0" minHeight="140.0" prefHeight="161.0" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="241.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="18.0" minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="426.0" prefWidth="70.0" style="-fx-background-color: e5322d; -fx-border-radius: 0 40 40 0; -fx-background-radius: 0 40 40 0;" GridPane.rowIndex="1" GridPane.rowSpan="2">
+            <AnchorPane prefHeight="441.0" prefWidth="70.0" style="-fx-background-color: e5322d; -fx-border-radius: 0 40 40 0; -fx-background-radius: 0 40 40 0;" GridPane.rowIndex="1" GridPane.rowSpan="2">
                <children>
-                  <JFXButton fx:id="openButton" buttonType="RAISED" layoutX="4.0" layoutY="59.0" onAction="#addFile" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+                  <JFXButton fx:id="openButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="4.0" layoutY="59.0" onAction="#addFile" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
                      <graphic>
                         <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -55,7 +55,7 @@
                         <Font name="Cantarell Regular" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="5.0" layoutY="172.0" onAction="#clear" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="3.0">
+                  <JFXButton fx:id="clearButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="5.0" layoutY="172.0" onAction="#clear" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="3.0">
                      <graphic>
                         <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -70,11 +70,11 @@
                         <Font name="Cantarell Regular" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="clearButton1" buttonType="RAISED" disable="true" layoutX="6.0" layoutY="300.0" onAction="#clear" prefHeight="58.0" prefWidth="59.0" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;" text="Button">
+                  <JFXButton fx:id="pdfButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="300.0" onAction="#clear" prefHeight="58.0" prefWidth="59.0" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;" text="Button">
                      <graphic>
                         <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/clear.png" />
+                              <Image url="@images/pdf.png" />
                            </image>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -167,6 +167,9 @@
                <GridPane.margin>
                   <Insets bottom="20.0" top="20.0" />
                </GridPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
             </AnchorPane>
             <AnchorPane prefHeight="76.0" prefWidth="500.0" style="-fx-background-color: WHITE;" styleClass="floatingPane" stylesheets="@styles.css" GridPane.columnIndex="4" GridPane.columnSpan="2">
                <children>
@@ -200,9 +203,9 @@
                               <Insets top="10.0" />
                            </GridPane.margin>
                         </TextFlow>
-                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <AnchorPane GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <children>
-                              <JFXButton buttonType="RAISED" layoutX="116.0" layoutY="2.0" onAction="#showConfigWindow" prefHeight="54.0" prefWidth="70.0" ripplerFill="#5e5e5e">
+                              <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="116.0" layoutY="2.0" maxHeight="54.0" maxWidth="70.0" minHeight="54.0" minWidth="70.0" onAction="#showConfigWindow" prefHeight="54.0" prefWidth="70.0" ripplerFill="#5e5e5e" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <graphic>
                                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -213,8 +216,14 @@
                                        </cursor>
                                     </ImageView>
                                  </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
                               </JFXButton>
                            </children>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="30.0" />
+                           </GridPane.margin>
                         </AnchorPane>
                      </children>
                   </GridPane>
@@ -225,13 +234,19 @@
                <GridPane.margin>
                   <Insets bottom="20.0" top="20.0" />
                </GridPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
             </AnchorPane>
-            <JFXButton fx:id="playButton" buttonType="RAISED" maxHeight="70.0" maxWidth="70.0" minHeight="70.0" minWidth="70.0" onAction="#calculate" prefHeight="70.0" prefWidth="70.0" ripplerFill="#727272" style="-fx-background-color: TRANSPARENT;" GridPane.columnIndex="3">
+            <JFXButton fx:id="playButton" buttonType="RAISED" contentDisplay="CENTER" maxHeight="60.0" maxWidth="60.0" minWidth="60.0" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" ripplerFill="#727272" style="-fx-background-color: TRANSPARENT;" textAlignment="CENTER" GridPane.columnIndex="3">
                <graphic>
                   <ImageView fitHeight="63.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/play.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
             </JFXButton>
@@ -247,9 +262,9 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane GridPane.rowIndex="3">
+            <AnchorPane GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <children>
-                  <JFXButton fx:id="openButton1" buttonType="RAISED" layoutX="4.0" layoutY="113.0" minWidth="52.0" onAction="#showHelpWindow" prefHeight="62.0" prefWidth="70.0" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;">
+                  <JFXButton fx:id="openButton1" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="4.0" layoutY="113.0" minWidth="52.0" onAction="#showHelpWindow" prefHeight="62.0" prefWidth="70.0" ripplerFill="#575757" style="-fx-background-color: TRANSPARENT;" AnchorPane.bottomAnchor="20.0">
                      <font>
                         <Font name="Cantarell Regular" size="13.0" />
                      </font>
@@ -265,12 +280,15 @@
                      </graphic>
                   </JFXButton>
                </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
             </AnchorPane>
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </GridPane>
-      <StackPane fx:id="stackPane" mouseTransparent="true" pickOnBounds="false" prefHeight="685.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="stackPane" pickOnBounds="false" prefHeight="685.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>
